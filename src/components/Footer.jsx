@@ -181,11 +181,11 @@ export default function Footer() {
             <div className="mt-5 pt-4 border-t border-slate-800">
               <span className="text-xs text-slate-400 block mb-1">Inquiry Mailbox</span>
               <a
-                href="mailto:contact@youmika.site"
+                href="mailto:web@youmika.site"
                 className="text-xs font-medium text-slate-300 hover:text-[#56B4FF] transition-colors flex items-center gap-1.5"
               >
                 <Mail className="w-3.5 h-3.5 text-[#56B4FF]" />
-                <span>contact@youmika.site</span>
+                <span>web@youmika.site</span>
               </a>
             </div>
           </div>

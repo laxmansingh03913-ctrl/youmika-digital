@@ -201,10 +201,10 @@ export default function About({ onOpenQuote }) {
                   Contact Abhishek Directly
                 </Link>
                 <a
-                  href="mailto:contact@youmika.site"
+                  href="mailto:web@youmika.site"
                   className="text-xs text-slate-400 hover:text-white"
                 >
-                  contact@youmika.site
+                  web@youmika.site
                 </a>
               </div>
             </div>

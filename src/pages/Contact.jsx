@@ -326,10 +326,10 @@ export default function Contact() {
               </p>
 
               <a
-                href="mailto:contact@youmika.site"
+                href="mailto:web@youmika.site"
                 className="block p-3 rounded-xl bg-slate-950 border border-slate-800 text-xs font-mono text-[#56B4FF] hover:underline"
               >
-                contact@youmika.site
+                web@youmika.site
               </a>
             </div>
 

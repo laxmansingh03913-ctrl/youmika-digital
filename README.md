@@ -128,7 +128,7 @@ The contact form currently features full client-side validation and interactive 
 2. Set the form `action="https://formspree.io/f/{your_id}"` and `method="POST"`.
 
 ### Option C: Resend / Node Server
-1. Create a serverless API route in `/api/contact.js` using `@resend/node` to deliver inquiries directly to `contact@youmika.site`.
+1. Create a serverless API route in `/api/contact.js` using `@resend/node` to deliver inquiries directly to `web@youmika.site`.
 
 ---
 
