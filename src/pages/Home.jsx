@@ -88,10 +88,10 @@ export default function Home({ onOpenQuote }) {
         canonicalPath="/"
       />
 
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden bg-white">
         {/* Background Ambient Glows */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[650px] bg-ambient-radial pointer-events-none" />
-        <div className="absolute top-40 right-10 w-96 h-96 bg-[#2478D4]/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-40 right-10 w-96 h-96 bg-[#2478D4]/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute top-96 left-10 w-96 h-96 bg-[#56B4FF]/5 rounded-full blur-3xl pointer-events-none" />
 
         {/* ============================================================ */}
@@ -100,21 +100,21 @@ export default function Home({ onOpenQuote }) {
         <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto space-y-6">
             {/* Pill Tag */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs font-semibold text-[#56B4FF] shadow-sm backdrop-blur-sm animate-fadeIn">
-              <span className="w-2 h-2 rounded-full bg-[#56B4FF] animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-xs font-semibold text-[#1D63B5] shadow-sm backdrop-blur-sm animate-fadeIn">
+              <span className="w-2 h-2 rounded-full bg-[#2478D4] animate-pulse" />
               <span>Modern Digital Agency for India &amp; USA Businesses</span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-white leading-[1.12]">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-slate-900 leading-[1.12]">
               We Don't Just Build Websites — <br className="hidden sm:inline" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#56B4FF] via-[#2478D4] to-blue-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2478D4] via-[#1D63B5] to-[#56B4FF]">
                 We Manage Your Entire Business Online.
               </span>
             </h1>
 
             {/* Subheading */}
-            <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
+            <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed">
               Websites, social media, leads, bookings, and reviews — one team handles your complete online presence while you focus on running your business.
             </p>
 
@@ -125,34 +125,34 @@ export default function Home({ onOpenQuote }) {
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-gradient-to-r from-[#2478D4] to-[#1D63B5] hover:from-[#1D63B5] hover:to-[#2478D4] text-white font-semibold text-base shadow-xl shadow-[#2478D4]/30 hover:shadow-2xl hover:shadow-[#2478D4]/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
               >
                 <span>Let's Talk</span>
-                <ArrowRight className="w-5 h-5 text-[#56B4FF]" />
+                <ArrowRight className="w-5 h-5 text-[#1D63B5]" />
               </Link>
 
               <Link
                 to="/work"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-white font-semibold text-base border border-slate-700/80 shadow-md hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-white hover:bg-slate-50 text-slate-800 hover:text-slate-900 font-semibold text-base border border-slate-300 shadow-md hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
               >
                 <span>Explore Our Work</span>
-                <ArrowUpRight className="w-5 h-5 text-slate-400" />
+                <ArrowUpRight className="w-5 h-5 text-slate-500" />
               </Link>
             </div>
 
             {/* Value Indicators (Honest propositions, no fake claims) */}
-            <div className="pt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-300 font-medium">
+            <div className="pt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-600 font-medium">
               <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-[#56B4FF]" />
+                <CheckCircle2 className="w-4 h-4 text-[#1D63B5]" />
                 <span>Built by Abhishek himself</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-[#56B4FF]" />
+                <CheckCircle2 className="w-4 h-4 text-[#1D63B5]" />
                 <span>Fast on every phone</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-[#56B4FF]" />
+                <CheckCircle2 className="w-4 h-4 text-[#1D63B5]" />
                 <span>Starts at ₹5,999 / $199</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-[#56B4FF]" />
+                <CheckCircle2 className="w-4 h-4 text-[#1D63B5]" />
                 <span>Talk directly on WhatsApp</span>
               </div>
             </div>
@@ -291,16 +291,16 @@ export default function Home({ onOpenQuote }) {
         {/* ============================================================ */}
         {/* 2. CORE VALUE PROPOSITIONS (HONEST PILLARS)                  */}
         {/* ============================================================ */}
-        <section className="py-16 bg-[#0B0F19]/90 border-y border-slate-800">
+        <section className="py-16 bg-slate-50 border-y border-slate-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto space-y-2 mb-12">
-              <span className="text-xs font-semibold text-[#56B4FF] uppercase tracking-wider">
+              <span className="text-xs font-semibold text-[#1D63B5] uppercase tracking-wider">
                 Why Work With Me
               </span>
-              <h2 className="text-2xl sm:text-3xl font-display font-bold text-white">
+              <h2 className="text-2xl sm:text-3xl font-display font-bold text-slate-900">
                 No Big Promises. Just Honest Work.
               </h2>
-              <p className="text-slate-400 text-xs sm:text-sm">
+              <p className="text-slate-500 text-xs sm:text-sm">
                 Clear prices, direct communication, and websites that do their job.
               </p>
             </div>
@@ -311,15 +311,15 @@ export default function Home({ onOpenQuote }) {
                 return (
                   <div
                     key={idx}
-                    className="p-6 rounded-2xl bg-[#101827] border border-slate-800 hover:border-[#2478D4]/40 transition-all space-y-3"
+                    className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-[#2478D4]/40 transition-all space-y-3"
                   >
-                    <div className="w-10 h-10 rounded-xl bg-[#2478D4]/15 border border-[#2478D4]/30 flex items-center justify-center text-[#56B4FF]">
+                    <div className="w-10 h-10 rounded-xl bg-[#2478D4]/15 border border-[#2478D4]/30 flex items-center justify-center text-[#1D63B5]">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <h3 className="text-base font-display font-bold text-white">
+                    <h3 className="text-base font-display font-bold text-slate-900">
                       {prop.title}
                     </h3>
-                    <p className="text-slate-400 text-xs leading-relaxed">
+                    <p className="text-slate-500 text-xs leading-relaxed">
                       {prop.description}
                     </p>
                   </div>
@@ -332,10 +332,10 @@ export default function Home({ onOpenQuote }) {
         {/* ============================================================ */}
         {/* 3. INDUSTRY FOCUS / AUDIENCE STRIP                           */}
         {/* ============================================================ */}
-        <section className="border-b border-slate-800/80 bg-[#101827] py-12">
+        <section className="border-b border-slate-200 bg-white py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
-              <span className="text-xs uppercase tracking-widest text-slate-400 font-semibold">
+              <span className="text-xs uppercase tracking-widest text-slate-500 font-semibold">
                 Who I Build For
               </span>
             </div>
@@ -353,15 +353,15 @@ export default function Home({ onOpenQuote }) {
                 return (
                   <div
                     key={idx}
-                    className="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-[#2478D4]/50 transition-all text-center space-y-2 group"
+                    className="p-4 rounded-xl bg-white border border-slate-200 hover:border-[#2478D4]/50 transition-all text-center space-y-2 group"
                   >
-                    <div className="w-8 h-8 rounded-lg bg-slate-800 group-hover:bg-[#2478D4]/20 group-hover:text-[#56B4FF] text-slate-400 flex items-center justify-center mx-auto transition-colors">
+                    <div className="w-8 h-8 rounded-lg bg-slate-100 group-hover:bg-blue-50 group-hover:text-[#1D63B5] text-slate-500 flex items-center justify-center mx-auto transition-colors">
                       <Icon className="w-4 h-4" />
                     </div>
-                    <span className="text-xs font-semibold text-slate-200 block">
+                    <span className="text-xs font-semibold text-slate-800 block">
                       {item.name}
                     </span>
-                    <span className="text-[10px] text-[#56B4FF] block">
+                    <span className="text-[10px] text-[#1D63B5] block">
                       {item.tag}
                     </span>
                   </div>
@@ -377,13 +377,13 @@ export default function Home({ onOpenQuote }) {
         <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <div className="space-y-3 max-w-2xl">
-              <span className="text-xs font-semibold text-[#56B4FF] uppercase tracking-wider">
+              <span className="text-xs font-semibold text-[#1D63B5] uppercase tracking-wider">
                 What I Can Do
               </span>
-              <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight">
+              <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-slate-900 tracking-tight">
                 What I Can Do for Your Business
               </h2>
-              <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+              <p className="text-slate-500 text-sm sm:text-base leading-relaxed">
                 Websites, marketing, bookings, and full management — pick what you need, or hand me the whole thing.
               </p>
             </div>
@@ -391,7 +391,7 @@ export default function Home({ onOpenQuote }) {
             <div>
               <Link
                 to="/services"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-[#56B4FF] hover:text-white transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[#1D63B5] hover:text-slate-900 transition-colors"
               >
                 <span>See all 8 services</span>
                 <ArrowRight className="w-4 h-4" />
@@ -403,34 +403,34 @@ export default function Home({ onOpenQuote }) {
             {servicesData.slice(0, 6).map((service) => (
               <div
                 key={service.id}
-                className="p-7 rounded-2xl bg-gradient-to-b from-[#131D31] to-[#101827] border border-slate-800 hover:border-[#2478D4]/50 transition-all duration-300 hover:-translate-y-1 group flex flex-col justify-between"
+                className="p-7 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-[#2478D4]/50 transition-all duration-300 hover:-translate-y-1 group flex flex-col justify-between"
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-mono font-bold text-[#56B4FF]">
+                    <span className="text-xs font-mono font-bold text-[#1D63B5]">
                       {service.number}
                     </span>
-                    <span className="px-2.5 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-slate-800 text-slate-300 border border-slate-700">
+                    <span className="px-2.5 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-slate-100 text-slate-700 border border-slate-200">
                       {service.tag}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-display font-bold text-white group-hover:text-[#56B4FF] transition-colors">
+                  <h3 className="text-xl font-display font-bold text-slate-900 group-hover:text-[#1D63B5] transition-colors">
                     {service.title}
                   </h3>
 
-                  <p className="text-slate-400 text-sm leading-relaxed">
+                  <p className="text-slate-500 text-sm leading-relaxed">
                     {service.shortDescription}
                   </p>
                 </div>
 
-                <div className="pt-6 mt-6 border-t border-slate-800/80">
+                <div className="pt-6 mt-6 border-t border-slate-200">
                   <Link
                     to={`/services#${service.id}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-300 group-hover:text-white transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-600 group-hover:text-slate-900 transition-colors"
                   >
                     <span>View deliverables &amp; ROI</span>
-                    <ChevronRight className="w-3.5 h-3.5 text-[#56B4FF] group-hover:translate-x-1 transition-transform" />
+                    <ChevronRight className="w-3.5 h-3.5 text-[#1D63B5] group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
               </div>
@@ -438,15 +438,15 @@ export default function Home({ onOpenQuote }) {
           </div>
 
           {/* 7th Service Callout Banner */}
-          <div className="mt-8 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-slate-900 via-[#131D31] to-slate-900 border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="mt-8 p-6 sm:p-8 rounded-2xl bg-blue-50 border border-blue-200 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="space-y-1 text-center md:text-left">
-              <span className="text-xs font-semibold text-emerald-400 uppercase tracking-wider">
+              <span className="text-xs font-semibold text-emerald-700 uppercase tracking-wider">
                 Service #08 • Monthly Partner
               </span>
-              <h4 className="text-xl font-display font-bold text-white">
+              <h4 className="text-xl font-display font-bold text-slate-900">
                 Complete Business Management
               </h4>
-              <p className="text-slate-400 text-xs sm:text-sm max-w-xl">
+              <p className="text-slate-500 text-xs sm:text-sm max-w-xl">
                 Website, social media, Google profile, leads, bookings, and reviews — your whole business, managed every month.
               </p>
             </div>
@@ -462,19 +462,19 @@ export default function Home({ onOpenQuote }) {
         {/* ============================================================ */}
         {/* 5. FEATURED CONCEPT WORK (3 DEMONSTRATION PROJECTS)          */}
         {/* ============================================================ */}
-        <section className="py-24 bg-[#0B0F19] border-y border-slate-800">
+        <section className="py-24 bg-slate-50 border-y border-slate-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-              <span className="px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-[#2478D4]/10 border border-[#2478D4]/30 text-[#56B4FF]">
+              <span className="px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-[#2478D4]/5 border border-[#2478D4]/30 text-[#1D63B5]">
                 Demonstration Portfolio
               </span>
-              <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-white tracking-tight">
+              <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-slate-900 tracking-tight">
                 Don't Take My Word for It — Try Them Yourself.
               </h2>
-              <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+              <p className="text-slate-500 text-sm sm:text-base leading-relaxed">
                 Three real demo websites I built. Click one and use it — book a table, filter the menu, try the class schedule. Your website will work the same way.
               </p>
-              <div className="inline-block p-2 rounded-lg bg-slate-900/80 border border-slate-800 text-[11px] text-slate-300">
+              <div className="inline-block p-2 rounded-lg bg-white border border-slate-200 text-[11px] text-slate-600">
                 Notice: These are concept demonstration prototypes created to illustrate technical capabilities.
               </div>
             </div>
@@ -483,41 +483,41 @@ export default function Home({ onOpenQuote }) {
               {projectsData.map((project) => (
                 <div
                   key={project.id}
-                  className="rounded-2xl bg-[#101827] border border-slate-800 overflow-hidden flex flex-col justify-between hover:border-slate-700 transition-all duration-300 hover:-translate-y-1.5 shadow-xl group"
+                  className="rounded-2xl bg-white border border-slate-200 overflow-hidden flex flex-col justify-between hover:border-slate-300 transition-all duration-300 hover:-translate-y-1.5 shadow-xl group"
                 >
                   {/* Thumbnail / Mock Screen Graphic */}
                   <div
-                    className="p-6 relative overflow-hidden border-b border-slate-800"
+                    className="p-6 relative overflow-hidden border-b border-slate-200"
                     style={{
-                      background: `linear-gradient(135deg, ${project.accentColor}15 0%, #101827 100%)`
+                      background: `linear-gradient(135deg, ${project.accentColor}15 0%, #ffffff 100%)`
                     }}
                   >
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-300 px-2.5 py-1 rounded bg-slate-900/80 border border-slate-700/60">
+                      <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-600 px-2.5 py-1 rounded bg-white border border-slate-300">
                         {project.badge}
                       </span>
-                      <span className="text-[11px] text-emerald-400 font-medium">
+                      <span className="text-[11px] text-emerald-700 font-medium">
                         Concept Demo
                       </span>
                     </div>
 
                     <div className="space-y-2 py-4">
-                      <h4 className="text-xl font-display font-bold text-white group-hover:text-[#56B4FF] transition-colors">
+                      <h4 className="text-xl font-display font-bold text-slate-900 group-hover:text-[#1D63B5] transition-colors">
                         {project.title}
                       </h4>
-                      <p className="text-xs text-slate-300 line-clamp-2">
+                      <p className="text-xs text-slate-600 line-clamp-2">
                         {project.tagline}
                       </p>
                     </div>
 
                     {/* Architecture specifications row */}
-                    <div className="grid grid-cols-3 gap-2 pt-3 border-t border-slate-800/80">
+                    <div className="grid grid-cols-3 gap-2 pt-3 border-t border-slate-200">
                       {project.metrics.map((m, idx) => (
                         <div key={idx} className="text-center">
-                          <span className="text-xs font-semibold text-white block">
+                          <span className="text-xs font-semibold text-slate-900 block">
                             {m.value}
                           </span>
-                          <span className="text-[9px] text-slate-400 uppercase tracking-wider block">
+                          <span className="text-[9px] text-slate-500 uppercase tracking-wider block">
                             {m.label}
                           </span>
                         </div>
@@ -527,7 +527,7 @@ export default function Home({ onOpenQuote }) {
 
                   {/* Body Content */}
                   <div className="p-6 space-y-4 flex-1 flex flex-col justify-between">
-                    <p className="text-xs text-slate-400 leading-relaxed">
+                    <p className="text-xs text-slate-500 leading-relaxed">
                       {project.summary}
                     </p>
 
@@ -536,7 +536,7 @@ export default function Home({ onOpenQuote }) {
                         {project.techStack.slice(0, 3).map((tech, idx) => (
                           <span
                             key={idx}
-                            className="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-900 text-slate-300 border border-slate-800"
+                            className="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-100 text-slate-700 border border-slate-200"
                           >
                             {tech}
                           </span>
@@ -555,7 +555,7 @@ export default function Home({ onOpenQuote }) {
                       </a>
                       <button
                         onClick={() => setSelectedProject(project)}
-                        className="w-full py-2 text-xs font-medium text-slate-400 hover:text-white transition-colors"
+                        className="w-full py-2 text-xs font-medium text-slate-500 hover:text-slate-900 transition-colors"
                       >
                         View details &amp; features
                       </button>
@@ -568,10 +568,10 @@ export default function Home({ onOpenQuote }) {
             <div className="mt-12 text-center">
               <Link
                 to="/work"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 hover:text-white hover:border-[#2478D4] text-xs font-semibold transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white border border-slate-300 text-slate-700 hover:text-slate-900 shadow-sm hover:border-[#2478D4] text-xs font-semibold transition-all"
               >
                 <span>View Full Portfolio &amp; Technical Breakdown</span>
-                <ArrowRight className="w-4 h-4 text-[#56B4FF]" />
+                <ArrowRight className="w-4 h-4 text-[#1D63B5]" />
               </Link>
             </div>
           </div>
@@ -582,13 +582,13 @@ export default function Home({ onOpenQuote }) {
         {/* ============================================================ */}
         <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto space-y-3 mb-16">
-            <span className="text-xs font-semibold text-[#56B4FF] uppercase tracking-wider">
+            <span className="text-xs font-semibold text-[#1D63B5] uppercase tracking-wider">
               How It Works
             </span>
-            <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-slate-900 tracking-tight">
               Four Simple Steps
             </h2>
-            <p className="text-slate-400 text-sm">
+            <p className="text-slate-500 text-sm">
               You always know what's happening, and you always talk to me.
             </p>
           </div>
@@ -597,16 +597,16 @@ export default function Home({ onOpenQuote }) {
             {deliveryProcess.map((step, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 relative space-y-3 flex flex-col justify-between"
+                className="p-6 rounded-2xl bg-white border border-slate-200 relative space-y-3 flex flex-col justify-between"
               >
                 <div className="space-y-3">
                   <span className="text-3xl font-display font-extrabold text-[#2478D4] block">
                     {step.step}
                   </span>
-                  <h3 className="text-base font-display font-bold text-white">
+                  <h3 className="text-base font-display font-bold text-slate-900">
                     {step.title}
                   </h3>
-                  <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                  <p className="text-slate-500 text-xs sm:text-sm leading-relaxed">
                     {step.desc}
                   </p>
                 </div>
@@ -621,32 +621,32 @@ export default function Home({ onOpenQuote }) {
         {/* ============================================================ */}
         {/* 7. FOUNDER SECTION (ABHISHEK — AUTHENTIC TRUST)               */}
         {/* ============================================================ */}
-        <section className="py-20 bg-[#0B0F19] border-y border-slate-800">
+        <section className="py-20 bg-slate-50 border-y border-slate-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-slate-900 via-[#131D31] to-slate-900 border border-slate-800 shadow-2xl">
+            <div className="p-8 sm:p-12 rounded-3xl bg-white border border-slate-200 shadow-sm">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div className="lg:col-span-4 text-center lg:text-left space-y-4">
                   <img
                     src="/founder-abhishek.jpg"
                     alt="Abhishek — Founder of Youmika Digital"
-                    className="w-24 h-24 rounded-2xl object-cover border-2 border-[#56B4FF]/40 shadow-xl shadow-[#2478D4]/20 mx-auto lg:mx-0"
+                    className="w-24 h-24 rounded-2xl object-cover border-2 border-[#2478D4]/30 shadow-xl shadow-[#2478D4]/20 mx-auto lg:mx-0"
                   />
                   <div>
-                    <h3 className="text-2xl font-display font-bold text-white">
+                    <h3 className="text-2xl font-display font-bold text-slate-900">
                       Abhishek
                     </h3>
-                    <span className="text-xs font-semibold text-[#56B4FF] block">
+                    <span className="text-xs font-semibold text-[#1D63B5] block">
                       Founder &amp; Lead Full-Stack Developer
                     </span>
-                    <span className="text-xs text-slate-400">
+                    <span className="text-xs text-slate-500">
                       Youmika Digital • Serving India &amp; USA
                     </span>
                   </div>
                 </div>
 
-                <div className="lg:col-span-8 space-y-4 text-slate-300 text-sm leading-relaxed">
+                <div className="lg:col-span-8 space-y-4 text-slate-600 text-sm leading-relaxed">
                   <p>
-                    Hi, I'm Abhishek. I'm from Bhilwara, Rajasthan — a BCA student in Jaipur who taught himself to build websites. I started with my own reading website, Yomika, and now I help clinics, gyms, restaurants, and local businesses get customers online.
+                    Hi, I'm Abhishek. I'm a software engineer from Bhilwara, Rajasthan. I taught myself to build websites. I started with my own reading website, Yomika, and now I help clinics, gyms, restaurants, and local businesses get customers online.
                   </p>
                   <p>
                     When you message me, you talk to me — not a team, not a manager. I build your website myself, I answer your questions myself, and my prices start at ₹5,999 ($199). If I can't do something well, I'll tell you straight.
@@ -661,7 +661,7 @@ export default function Home({ onOpenQuote }) {
                     </Link>
                     <a
                       href="mailto:web@youmika.site"
-                      className="text-xs font-mono text-slate-300 hover:text-[#56B4FF] transition-colors"
+                      className="text-xs font-mono text-slate-600 hover:text-[#1D63B5] transition-colors"
                     >
                       web@youmika.site
                     </a>
@@ -677,13 +677,13 @@ export default function Home({ onOpenQuote }) {
         {/* ============================================================ */}
         <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto space-y-3 mb-16">
-            <span className="text-xs font-semibold text-[#56B4FF] uppercase tracking-wider">
+            <span className="text-xs font-semibold text-[#1D63B5] uppercase tracking-wider">
               Straightforward Investment
             </span>
-            <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-slate-900 tracking-tight">
               Clear Packages. No Hidden Costs.
             </h2>
-            <p className="text-slate-400 text-sm leading-relaxed">
+            <p className="text-slate-500 text-sm leading-relaxed">
               Pick a package that fits. Every price includes the full website — no hidden charges later.
             </p>
           </div>
@@ -694,8 +694,8 @@ export default function Home({ onOpenQuote }) {
                 key={plan.id}
                 className={`rounded-2xl p-7 flex flex-col justify-between transition-all duration-300 relative ${
                   plan.isPopular
-                    ? "bg-gradient-to-b from-[#131D31] via-[#101827] to-[#101827] border-2 border-[#2478D4] shadow-2xl shadow-[#2478D4]/10 md:-translate-y-2"
-                    : "bg-[#101827] border border-slate-800"
+                    ? "bg-white border-2 border-[#2478D4] shadow-xl shadow-[#2478D4]/10 md:-translate-y-2"
+                    : "bg-white border border-slate-200"
                 }`}
               >
                 {plan.isPopular && (
@@ -706,33 +706,33 @@ export default function Home({ onOpenQuote }) {
 
                 <div className="space-y-6">
                   <div>
-                    <span className="text-xs font-semibold text-[#56B4FF] uppercase tracking-wider">
+                    <span className="text-xs font-semibold text-[#1D63B5] uppercase tracking-wider">
                       {plan.badge}
                     </span>
-                    <h3 className="text-xl font-display font-bold text-white mt-1">
+                    <h3 className="text-xl font-display font-bold text-slate-900 mt-1">
                       {plan.name}
                     </h3>
-                    <p className="text-xs text-slate-400 mt-2 min-h-[36px]">
+                    <p className="text-xs text-slate-500 mt-2 min-h-[36px]">
                       {plan.idealFor}
                     </p>
                   </div>
 
-                  <div className="pt-2 pb-4 border-y border-slate-800">
+                  <div className="pt-2 pb-4 border-y border-slate-200">
                     <div className="flex items-baseline gap-2">
-                      <span className="text-3xl sm:text-4xl font-display font-extrabold text-white">
+                      <span className="text-3xl sm:text-4xl font-display font-extrabold text-slate-900">
                         {plan.priceINR}
                       </span>
-                      <span className="text-xs text-slate-400">/ {plan.priceUSD} USD</span>
+                      <span className="text-xs text-slate-500">/ {plan.priceUSD} USD</span>
                     </div>
-                    <span className="text-[11px] text-slate-400 block mt-1">
-                      Turnaround: <strong className="text-slate-300">{plan.turnaround}</strong> • {plan.revisions}
+                    <span className="text-[11px] text-slate-500 block mt-1">
+                      Turnaround: <strong className="text-slate-600">{plan.turnaround}</strong> • {plan.revisions}
                     </span>
                   </div>
 
-                  <ul className="space-y-2.5 text-xs text-slate-300">
+                  <ul className="space-y-2.5 text-xs text-slate-600">
                     {plan.deliverables.slice(0, 5).map((item, idx) => (
                       <li key={idx} className="flex items-start gap-2">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#56B4FF] shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#1D63B5] shrink-0 mt-0.5" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -745,7 +745,7 @@ export default function Home({ onOpenQuote }) {
                     className={`w-full py-3 rounded-lg text-xs font-semibold flex items-center justify-center gap-2 transition-all ${
                       plan.isPopular
                         ? "bg-[#2478D4] hover:bg-[#1D63B5] text-white shadow-lg shadow-[#2478D4]/30"
-                        : "bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700"
+                        : "bg-slate-100 hover:bg-slate-200 text-slate-800 hover:text-slate-900 border border-slate-300"
                     }`}
                   >
                     <span>{plan.ctaText}</span>
@@ -759,7 +759,7 @@ export default function Home({ onOpenQuote }) {
           <div className="mt-12 text-center">
             <Link
               to="/pricing"
-              className="text-xs font-semibold text-[#56B4FF] hover:text-white inline-flex items-center gap-1.5 transition-colors"
+              className="text-xs font-semibold text-[#1D63B5] hover:text-slate-900 inline-flex items-center gap-1.5 transition-colors"
             >
               <span>Read detailed feature breakdowns &amp; USA quotation notes</span>
               <ChevronRight className="w-4 h-4" />

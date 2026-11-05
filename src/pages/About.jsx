@@ -186,7 +186,7 @@ export default function About({ onOpenQuote }) {
 
             <div className="lg:col-span-8 space-y-4 text-slate-300 text-sm leading-relaxed">
               <p>
-                Hello! I'm Abhishek — from Bhilwara, Rajasthan. I'm a BCA student in Jaipur, and I taught myself to build websites.
+                Hello! I'm Abhishek — a software engineer from Bhilwara, Rajasthan. I taught myself to build websites.
               </p>
               <p>
                 I started with my own reading website, Yomika (youmika.site), and I saw how many small businesses around me had no website at all — or had paid a lot for one that never brought them a single customer. That's why I started Youmika Digital: good websites at honest prices, built by the same person you talk to.
