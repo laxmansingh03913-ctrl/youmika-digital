@@ -9,8 +9,8 @@ export default function WhatsAppButton() {
     "Hi Youmika Digital! I would like to discuss a digital project (Website / UI/UX / SEO) for my business."
   );
   
-  // Open WhatsApp direct link
-  const whatsappUrl = `https://wa.me/?text=${message}`;
+  // Cross-platform WhatsApp URL
+  const whatsappUrl = `https://api.whatsapp.com/send?text=${message}`;
 
   return (
     <div className="fixed bottom-6 right-6 z-40 flex items-center gap-3">
@@ -47,4 +47,3 @@ export default function WhatsAppButton() {
     </div>
   );
 }
-

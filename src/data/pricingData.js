@@ -46,7 +46,7 @@ export const pricingPlans = [
       "Dynamic Services & Portfolio / Gallery Section",
       "Interactive Appointment / Reservation / Inquiry Form",
       "Google Maps, Business Hours & Location Schemas",
-      "Speed & Core Web Vitals Optimization (90+ Score)",
+      "Speed & Performance Optimization with Clean Modular Code",
       "Google Analytics 4 & Meta Pixel Setup",
       "30 Days of Complimentary Post-Launch Support"
     ],

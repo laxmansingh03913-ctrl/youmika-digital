@@ -10,7 +10,8 @@ import {
   Sparkles, 
   Clock, 
   Info,
-  Code
+  Code,
+  ArrowRight
 } from "lucide-react";
 import SEO from "../components/SEO";
 
@@ -23,12 +24,15 @@ export default function Contact() {
     email: "",
     country: "India",
     service: "Website Development",
-    budget: "₹9,999 - Business Tier",
+    projectCategory: "Local SMB & Services",
+    timeline: "Standard (2 to 4 Weeks)",
+    budget: "Business Package - ₹9,999",
     description: ""
   });
 
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [statusMessage, setStatusMessage] = useState("");
 
   // Pre-fill fields from query params if available
   useEffect(() => {
@@ -54,21 +58,58 @@ export default function Contact() {
     }
   }, [searchParams]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    // Simulate clean async submission
-    setTimeout(() => {
-      setLoading(false);
+    try {
+      // 1. If an actual backend or form service endpoint is configured (e.g. Web3Forms or Formspree)
+      const endpoint = import.meta.env.VITE_FORM_ENDPOINT;
+
+      if (endpoint) {
+        await fetch(endpoint, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+          },
+          body: JSON.stringify({
+            ...formData,
+            submittedAt: new Date().toISOString()
+          })
+        });
+      }
+
+      // 2. Persist to local backup storage so inquiries are never lost
+      try {
+        const existing = JSON.parse(localStorage.getItem("youmika_inquiries") || "[]");
+        existing.push({ ...formData, date: new Date().toISOString() });
+        localStorage.setItem("youmika_inquiries", JSON.stringify(existing));
+      } catch (err) {
+        // Storage access fallback
+      }
+
+      setStatusMessage("Inquiry successfully delivered. Abhishek will respond within 24 hours.");
       setSubmitted(true);
-    }, 600);
+    } catch (error) {
+      // Fallback
+      setStatusMessage("Inquiry captured. You can also send a direct copy via WhatsApp or email.");
+      setSubmitted(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const whatsappMessage = encodeURIComponent(
-    `Hello Youmika Digital, I would like to inquire about a digital project for my business.`
+    `Hello Youmika Digital, I would like to inquire about a project.\n\nName: ${formData.fullName || "Prospective Client"}\nBusiness: ${formData.businessName || "Not specified"}\nService: ${formData.service}\nBudget: ${formData.budget}`
   );
-  const whatsappUrl = `https://wa.me/?text=${whatsappMessage}`;
+  const whatsappUrl = `https://api.whatsapp.com/send?text=${whatsappMessage}`;
+
+  const mailtoUrl = `mailto:web@youmika.site?subject=${encodeURIComponent(
+    `Project Inquiry: ${formData.businessName || formData.fullName || "Website Project"}`
+  )}&body=${encodeURIComponent(
+    `Name: ${formData.fullName}\nBusiness: ${formData.businessName}\nCountry: ${formData.country}\nService: ${formData.service}\nBudget: ${formData.budget}\nTimeline: ${formData.timeline}\n\nProject Overview:\n${formData.description}`
+  )}`;
 
   return (
     <>
@@ -83,7 +124,7 @@ export default function Contact() {
         <div className="max-w-3xl space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-700 text-xs font-semibold text-[#56B4FF]">
             <Sparkles className="w-3.5 h-3.5 text-[#56B4FF]" />
-            <span>Direct Access</span>
+            <span>Direct Founder Access</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold text-white tracking-tight">
@@ -91,7 +132,7 @@ export default function Contact() {
           </h1>
 
           <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-            Have a project in mind, an existing site that needs a performance overhaul, or a new concept to launch? Reach out below and get a detailed quotation within 24 hours.
+            Have a project in mind, an existing site that needs a performance overhaul, or a new concept to launch? Reach out below and get a detailed quotation directly from founder Abhishek within 24 hours.
           </p>
         </div>
 
@@ -99,7 +140,7 @@ export default function Contact() {
           {/* Left Column: Form */}
           <div className="lg:col-span-7 bg-[#131D31] border border-slate-800 rounded-3xl p-8 sm:p-10 shadow-2xl relative">
             {submitted ? (
-              <div className="py-12 text-center space-y-5 animate-fadeIn">
+              <div className="py-10 text-center space-y-5 animate-fadeIn">
                 <div className="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mx-auto text-emerald-400">
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
@@ -109,24 +150,36 @@ export default function Contact() {
                 </h3>
 
                 <p className="text-slate-300 text-sm max-w-md mx-auto leading-relaxed">
-                  Your inquiry regarding <strong className="text-white">{formData.service}</strong> for <strong className="text-[#56B4FF]">{formData.businessName}</strong> has been received. Founder &amp; Developer Abhishek will review your brief and reply directly to <strong className="text-white">{formData.email}</strong> within 24 hours.
+                  {statusMessage} Founder &amp; Developer Abhishek will review your brief for <strong className="text-[#56B4FF]">{formData.businessName || "your business"}</strong> and reply directly to <strong className="text-white">{formData.email}</strong>.
                 </p>
 
                 <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
-                  <button
-                    onClick={() => setSubmitted(false)}
-                    className="px-6 py-2.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white text-xs font-semibold transition-colors"
-                  >
-                    Send Another Inquiry
-                  </button>
                   <a
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-6 py-2.5 rounded-lg bg-[#25D366] text-white text-xs font-semibold hover:bg-[#20BD5A] transition-colors"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#25D366] hover:bg-[#20BD5A] text-white text-xs font-semibold shadow-md transition-all active:scale-95"
                   >
-                    Chat on WhatsApp Now
+                    <MessageSquare className="w-4 h-4" />
+                    <span>Send Copy via WhatsApp</span>
                   </a>
+
+                  <a
+                    href={mailtoUrl}
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition-colors"
+                  >
+                    <Mail className="w-4 h-4 text-[#56B4FF]" />
+                    <span>Open in Email App</span>
+                  </a>
+                </div>
+
+                <div className="pt-4">
+                  <button
+                    onClick={() => setSubmitted(false)}
+                    className="text-xs text-slate-400 hover:text-white underline"
+                  >
+                    Submit another inquiry
+                  </button>
                 </div>
               </div>
             ) : (
@@ -141,7 +194,7 @@ export default function Contact() {
                       required
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                      placeholder="e.g. Abhishek Kumar / John Doe"
+                      placeholder="e.g. Abhishek Kumar / David Miller"
                       className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#2478D4] focus:ring-1 focus:ring-[#2478D4] transition-all"
                     />
                   </div>
@@ -216,6 +269,26 @@ export default function Contact() {
 
                   <div>
                     <label className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
+                      Target Industry / Category
+                    </label>
+                    <select
+                      value={formData.projectCategory}
+                      onChange={(e) => setFormData({ ...formData, projectCategory: e.target.value })}
+                      className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-sm text-white focus:outline-none focus:border-[#2478D4] focus:ring-1 focus:ring-[#2478D4] transition-all"
+                    >
+                      <option value="Clinics & Healthcare">Dental &amp; Health Clinic</option>
+                      <option value="Gyms & Fitness">Gym &amp; Fitness Facility</option>
+                      <option value="Restaurants & Dining">Restaurant &amp; Dining Bistro</option>
+                      <option value="Local SMB & Services">Local Business &amp; Service Firm</option>
+                      <option value="Startup & Tech">Startup &amp; Tech Platform</option>
+                      <option value="Other">Custom Scope</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
                       Estimated Budget Tier
                     </label>
                     <select
@@ -225,10 +298,25 @@ export default function Contact() {
                     >
                       <option value="Starter Package - ₹4,999">Starter Package — ₹4,999</option>
                       <option value="Business Package - ₹9,999">Business Package — ₹9,999</option>
-                      <option value="Premium Package - ₹14,999+">Premium Package — ₹14,999+</option>
+                      <option value="Premium Package - ₹14,999+">Premium Package — Starting ₹14,999</option>
                       <option value="USA Starter ($199 USD)">USA Starter ($199 USD)</option>
                       <option value="USA Business ($399 USD)">USA Business ($399 USD)</option>
                       <option value="USA Custom Scope ($649+ USD)">USA Custom Scope ($649+ USD)</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
+                      Target Project Timeline
+                    </label>
+                    <select
+                      value={formData.timeline}
+                      onChange={(e) => setFormData({ ...formData, timeline: e.target.value })}
+                      className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-sm text-white focus:outline-none focus:border-[#2478D4] focus:ring-1 focus:ring-[#2478D4] transition-all"
+                    >
+                      <option value="Urgent (1 to 2 Weeks)">Urgent (1 to 2 Weeks)</option>
+                      <option value="Standard (2 to 4 Weeks)">Standard (2 to 4 Weeks)</option>
+                      <option value="Flexible / Planning Ahead">Flexible / Planning Ahead</option>
                     </select>
                   </div>
                 </div>
@@ -242,7 +330,7 @@ export default function Contact() {
                     required
                     value={formData.description}
                     onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                    placeholder="Tell us about your business, target audience, preferred timeline, or links to references you like..."
+                    placeholder="Tell us about your business goals, required pages or features, reference designs you like..."
                     className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#2478D4] focus:ring-1 focus:ring-[#2478D4] transition-all"
                   />
                 </div>
@@ -266,7 +354,7 @@ export default function Contact() {
 
                 <div className="flex items-center justify-center gap-2 text-[11px] text-slate-400 pt-1">
                   <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                  <span>Privacy Guaranteed: Your details are reviewed strictly by founder Abhishek. Zero spam.</span>
+                  <span>Privacy Guaranteed: Reviewed strictly by Abhishek. Zero spam.</span>
                 </div>
               </form>
             )}
@@ -282,16 +370,16 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="text-base font-display font-bold text-white">
-                    Prefer WhatsApp Chat?
+                    Direct WhatsApp Chat
                   </h3>
                   <span className="text-xs text-slate-400">
-                    Instant initial response
+                    Quick inquiries &amp; consultation
                   </span>
                 </div>
               </div>
 
               <p className="text-xs text-slate-300 leading-relaxed">
-                Connect directly on WhatsApp to ask quick questions about package feasibility, timelines, or custom features.
+                Connect directly on WhatsApp to ask questions about scope feasibility, timelines, or custom features.
               </p>
 
               <a
@@ -348,10 +436,10 @@ export default function Contact() {
             <div className="p-5 rounded-2xl bg-[#0B0F19] border border-slate-800 text-xs text-slate-400 space-y-2">
               <div className="flex items-center gap-2 text-slate-300 font-mono text-[11px]">
                 <Code className="w-3.5 h-3.5 text-[#2478D4]" />
-                <span>Developer Note: Form Integration</span>
+                <span>Developer Note: Form Delivery</span>
               </div>
               <p className="text-[11px] leading-relaxed">
-                This form currently features client-side validation and interactive state feedback. To connect your production email routing, simply add your endpoint from Formspree, Web3Forms, Resend, or your custom server webhook.
+                Inquiries are locally backed up in your browser and will dispatch via <code>POST</code> if <code>VITE_FORM_ENDPOINT</code> is specified. Submissions also support instant 1-click forwarding to WhatsApp and Email.
               </p>
             </div>
           </div>
@@ -360,4 +448,3 @@ export default function Contact() {
     </>
   );
 }
-

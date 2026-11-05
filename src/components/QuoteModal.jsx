@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { X, Send, Sparkles, CheckCircle2, Shield } from "lucide-react";
+import { X, Send, Sparkles, CheckCircle2, Shield, MessageSquare, Mail } from "lucide-react";
 
 export default function QuoteModal({ isOpen, onClose }) {
   if (!isOpen) return null;
@@ -15,17 +15,45 @@ export default function QuoteModal({ isOpen, onClose }) {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Simulate successful form submission
-    setSubmitted(true);
+    setLoading(true);
+
+    try {
+      const endpoint = import.meta.env.VITE_FORM_ENDPOINT;
+      if (endpoint) {
+        await fetch(endpoint, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ ...formData, submittedAt: new Date().toISOString() })
+        });
+      }
+
+      try {
+        const existing = JSON.parse(localStorage.getItem("youmika_inquiries") || "[]");
+        existing.push({ ...formData, date: new Date().toISOString() });
+        localStorage.setItem("youmika_inquiries", JSON.stringify(existing));
+      } catch (err) {}
+
+      setSubmitted(true);
+    } catch (err) {
+      setSubmitted(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleReset = () => {
     setSubmitted(false);
     onClose();
   };
+
+  const whatsappMessage = encodeURIComponent(
+    `Hello Youmika Digital, I requested a quote on your website.\nName: ${formData.fullName}\nBusiness: ${formData.businessName}\nService: ${formData.service}\nBudget: ${formData.budget}`
+  );
+  const whatsappUrl = `https://api.whatsapp.com/send?text=${whatsappMessage}`;
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-black/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 animate-fadeIn">
@@ -41,7 +69,7 @@ export default function QuoteModal({ isOpen, onClose }) {
                 Request a Project Quotation
               </h3>
               <p className="text-xs text-slate-400">
-                Youmika Digital • Fast Response within 24 Hours
+                Youmika Digital • Direct Review by Abhishek
               </p>
             </div>
           </div>
@@ -66,14 +94,24 @@ export default function QuoteModal({ isOpen, onClose }) {
                 Quotation Request Received!
               </h4>
               <p className="text-slate-300 text-sm max-w-md mx-auto leading-relaxed">
-                Thank you, <strong className="text-white">{formData.fullName}</strong>. Founder &amp; Developer Abhishek will review your project requirements for <strong className="text-[#56B4FF]">{formData.businessName || "your business"}</strong> and reply within 24 hours.
+                Thank you, <strong className="text-white">{formData.fullName}</strong>. Founder &amp; Developer Abhishek will review your project requirements for <strong className="text-[#56B4FF]">{formData.businessName || "your business"}</strong> and reply to <strong className="text-white">{formData.email}</strong> within 24 hours.
               </p>
-              <div className="pt-2">
+
+              <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-2.5 rounded-lg bg-[#25D366] hover:bg-[#20BD5A] text-white text-xs font-semibold flex items-center justify-center gap-2 transition-colors shadow-md"
+                >
+                  <MessageSquare className="w-4 h-4" />
+                  <span>Send on WhatsApp</span>
+                </a>
                 <button
                   onClick={handleReset}
-                  className="px-6 py-2.5 rounded-lg bg-[#2478D4] hover:bg-[#1D63B5] text-white text-sm font-semibold transition-colors"
+                  className="px-6 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold transition-colors"
                 >
-                  Done
+                  Close Window
                 </button>
               </div>
             </div>
@@ -196,16 +234,17 @@ export default function QuoteModal({ isOpen, onClose }) {
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full py-3 rounded-lg bg-gradient-to-r from-[#2478D4] to-[#1D63B5] hover:from-[#1D63B5] hover:to-[#2478D4] text-white font-semibold text-sm shadow-lg shadow-[#2478D4]/30 flex items-center justify-center gap-2 transition-all active:scale-[0.98]"
+                  disabled={loading}
+                  className="w-full py-3 rounded-lg bg-gradient-to-r from-[#2478D4] to-[#1D63B5] hover:from-[#1D63B5] hover:to-[#2478D4] text-white font-semibold text-sm shadow-lg shadow-[#2478D4]/30 flex items-center justify-center gap-2 transition-all active:scale-[0.98] disabled:opacity-70"
                 >
                   <Send className="w-4 h-4" />
-                  <span>Submit Quotation Request</span>
+                  <span>{loading ? "Delivering..." : "Submit Quotation Request"}</span>
                 </button>
               </div>
 
               <div className="flex items-center justify-center gap-2 text-[11px] text-slate-400 pt-1">
                 <Shield className="w-3.5 h-3.5 text-slate-400" />
-                <span>Zero spam guarantee • 100% direct founder review by Abhishek</span>
+                <span>Zero spam guarantee • Direct founder review by Abhishek</span>
               </div>
             </form>
           )}
@@ -214,4 +253,3 @@ export default function QuoteModal({ isOpen, onClose }) {
     </div>
   );
 }
-

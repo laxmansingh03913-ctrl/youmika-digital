@@ -6,7 +6,6 @@ import {
   CheckCircle2, 
   Sparkles, 
   Layers, 
-  TrendingUp, 
   ShieldCheck, 
   Zap, 
   Eye, 
@@ -17,7 +16,14 @@ import {
   Stethoscope,
   Dumbbell,
   UtensilsCrossed,
-  Briefcase
+  Briefcase,
+  UserCheck,
+  Gauge,
+  Tag,
+  MessageCircle,
+  FileCheck,
+  Rocket,
+  Compass
 } from "lucide-react";
 import SEO from "../components/SEO";
 import { servicesData } from "../data/servicesData";
@@ -27,13 +33,60 @@ import ProjectModal from "../components/ProjectModal";
 
 export default function Home({ onOpenQuote }) {
   const [selectedProject, setSelectedProject] = useState(null);
-  const [activeMockupTab, setActiveMockupTab] = useState("preview");
+
+  // 4 Core Honest Value Propositions
+  const coreValueProps = [
+    {
+      title: "Founder-Led Development",
+      description: "Direct engineering with founder and developer Abhishek. No junior interns, no account manager telephone games.",
+      icon: UserCheck
+    },
+    {
+      title: "Performance-Focused Websites",
+      description: "Lightweight, responsive React code crafted for fast load speeds, clean typography, and seamless mobile touch ergonomics.",
+      icon: Gauge
+    },
+    {
+      title: "Transparent Pricing",
+      description: "Clear, upfront packages starting from ₹4,999 ($199). No hidden maintenance traps, no inflated quotes or fake discount tricks.",
+      icon: Tag
+    },
+    {
+      title: "Direct Client Communication",
+      description: "Responsive support via WhatsApp, email (web@youmika.site), and video calls with dedicated overlap hours for India & USA.",
+      icon: MessageCircle
+    }
+  ];
+
+  // 4-Stage Project Delivery Process
+  const deliveryProcess = [
+    {
+      step: "01",
+      title: "Discovery & Strategy",
+      desc: "We discuss your target audience, business goals, and required features to outline a clear project roadmap before writing any code."
+    },
+    {
+      step: "02",
+      title: "High-Fidelity Design",
+      desc: "We craft clean, modern visual layouts focused on strong visual hierarchy, brand consistency, and frictionless mobile navigation."
+    },
+    {
+      step: "03",
+      title: "Clean-Code Engineering",
+      desc: "We develop your website using modern React and Tailwind CSS, ensuring clean semantic structure and maintainable architecture."
+    },
+    {
+      step: "04",
+      title: "Launch & Production Handoff",
+      desc: "We test responsiveness across all devices, configure your domain DNS, deploy to secure cloud hosting, and hand over complete ownership."
+    }
+  ];
 
   return (
     <>
       <SEO 
         title="We Build Digital Experiences That Grow Businesses" 
-        description="From stunning websites to powerful digital strategies, we help businesses in India and the USA turn their online presence into real opportunities."
+        description="Youmika Digital is a modern, reliable digital agency for businesses in India and the USA. Founder-led web development, UI/UX design, and SEO."
         canonicalPath="/"
       />
 
@@ -86,11 +139,15 @@ export default function Home({ onOpenQuote }) {
               </Link>
             </div>
 
-            {/* Value Indicators */}
-            <div className="pt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400 font-medium">
+            {/* Value Indicators (Honest propositions, no fake claims) */}
+            <div className="pt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-300 font-medium">
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-[#56B4FF]" />
-                <span>Direct Founder-Led Development</span>
+                <span>Founder-Led Development</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-4 h-4 text-[#56B4FF]" />
+                <span>Performance-Focused Websites</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-[#56B4FF]" />
@@ -98,7 +155,7 @@ export default function Home({ onOpenQuote }) {
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-[#56B4FF]" />
-                <span>Lighthouse 95+ Performance</span>
+                <span>Direct Client Communication</span>
               </div>
             </div>
           </div>
@@ -141,26 +198,27 @@ export default function Home({ onOpenQuote }) {
                         Built for Businesses That Demand Results
                       </h3>
                       <p className="text-slate-300 text-sm leading-relaxed">
-                        We blend high-impact aesthetics with clean technical execution. Every element is tested to accelerate trust, capture qualified inquiries, and drive customer retention.
+                        We blend high-impact aesthetics with clean technical execution. Every element is structured to establish authority, capture qualified inquiries, and provide a seamless mobile user experience.
                       </p>
                     </div>
 
-                    {/* Interactive Metrics Grid */}
-                    <div className="grid grid-cols-3 gap-3">
+                    {/* Value Pillars (Replaces unverified statistics) */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       <div className="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800">
-                        <span className="text-xs text-slate-400 block font-medium">PageSpeed</span>
-                        <span className="text-2xl font-bold font-display text-emerald-400">99<span className="text-xs text-slate-400 font-normal">/100</span></span>
-                        <span className="text-[10px] text-slate-400 block mt-0.5">Google Web Vitals</span>
+                        <span className="text-xs font-semibold text-white block mb-0.5">Founder-Led Build</span>
+                        <span className="text-[11px] text-slate-400 block">Direct code craft with Abhishek</span>
                       </div>
                       <div className="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800">
-                        <span className="text-xs text-slate-400 block font-medium">Conversion</span>
-                        <span className="text-2xl font-bold font-display text-[#56B4FF]">+34%</span>
-                        <span className="text-[10px] text-slate-400 block mt-0.5">Avg Inquiry Lift</span>
+                        <span className="text-xs font-semibold text-white block mb-0.5">Clean Code Architecture</span>
+                        <span className="text-[11px] text-slate-400 block">Lightweight React &amp; Tailwind CSS</span>
                       </div>
                       <div className="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800">
-                        <span className="text-xs text-slate-400 block font-medium">Turnaround</span>
-                        <span className="text-2xl font-bold font-display text-white">5-10<span className="text-xs text-slate-400 font-normal"> Days</span></span>
-                        <span className="text-[10px] text-slate-400 block mt-0.5">Agile Sprint Delivery</span>
+                        <span className="text-xs font-semibold text-white block mb-0.5">Mobile-First Layouts</span>
+                        <span className="text-[11px] text-slate-400 block">Ergonomic touch navigation</span>
+                      </div>
+                      <div className="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800">
+                        <span className="text-xs font-semibold text-white block mb-0.5">Transparent Investment</span>
+                        <span className="text-[11px] text-slate-400 block">Predictable fixed-cost pricing</span>
                       </div>
                     </div>
 
@@ -169,7 +227,7 @@ export default function Home({ onOpenQuote }) {
                         onClick={onOpenQuote}
                         className="px-4 py-2 rounded-lg bg-[#2478D4] text-white text-xs font-semibold hover:bg-[#1D63B5] transition-colors"
                       >
-                        Request Free Strategy Audit
+                        Request Project Quotation
                       </button>
                       <Link 
                         to="/work"
@@ -190,9 +248,9 @@ export default function Home({ onOpenQuote }) {
                       </div>
                       <p><span className="text-purple-400">export const</span> <span className="text-blue-300">agencyStack</span> = &#123;</p>
                       <p className="pl-4"><span className="text-slate-400">founder:</span> <span className="text-emerald-300">"Abhishek"</span>,</p>
+                      <p className="pl-4"><span className="text-slate-400">email:</span> <span className="text-cyan-300">"web@youmika.site"</span>,</p>
                       <p className="pl-4"><span className="text-slate-400">regions:</span> [<span className="text-emerald-300">"India"</span>, <span className="text-emerald-300">"USA"</span>],</p>
-                      <p className="pl-4"><span className="text-slate-400">architecture:</span> <span className="text-emerald-300">"Ultra-Fast Jamstack"</span>,</p>
-                      <p className="pl-4"><span className="text-slate-400">conversionDesign:</span> <span className="text-amber-300">true</span>,</p>
+                      <p className="pl-4"><span className="text-slate-400">approach:</span> <span className="text-emerald-300">"Clean Modern Code"</span>,</p>
                       <p className="pl-4"><span className="text-slate-400">pricingStartsAt:</span> <span className="text-cyan-300">"₹4,999 / $199"</span></p>
                       <p>&#125;;</p>
                     </div>
@@ -203,7 +261,7 @@ export default function Home({ onOpenQuote }) {
                         <Zap className="w-5 h-5" />
                       </div>
                       <div className="text-xs">
-                        <strong className="text-white block font-semibold">Zero Bloat, Zero Delays</strong>
+                        <strong className="text-white block font-semibold">Zero Bloat, Direct Engineering</strong>
                         <span className="text-slate-400">Direct engineering without agency middleman markups.</span>
                       </div>
                     </div>
@@ -215,9 +273,50 @@ export default function Home({ onOpenQuote }) {
         </section>
 
         {/* ============================================================ */}
-        {/* 2. INDUSTRY FOCUS / AUDIENCE STRIP                           */}
+        {/* 2. CORE VALUE PROPOSITIONS (HONEST PILLARS)                  */}
         {/* ============================================================ */}
-        <section className="border-y border-slate-800/80 bg-[#0B0F19]/90 py-10">
+        <section className="py-16 bg-[#0B0F19]/90 border-y border-slate-800">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-2xl mx-auto space-y-2 mb-12">
+              <span className="text-xs font-semibold text-[#56B4FF] uppercase tracking-wider">
+                Why Partner With Us
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-display font-bold text-white">
+                Built on Honest Value, Not Inflated Claims
+              </h2>
+              <p className="text-slate-400 text-xs sm:text-sm">
+                We believe in straightforward engineering and honest business relationships.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {coreValueProps.map((prop, idx) => {
+                const Icon = prop.icon;
+                return (
+                  <div
+                    key={idx}
+                    className="p-6 rounded-2xl bg-[#101827] border border-slate-800 hover:border-[#2478D4]/40 transition-all space-y-3"
+                  >
+                    <div className="w-10 h-10 rounded-xl bg-[#2478D4]/15 border border-[#2478D4]/30 flex items-center justify-center text-[#56B4FF]">
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <h3 className="text-base font-display font-bold text-white">
+                      {prop.title}
+                    </h3>
+                    <p className="text-slate-400 text-xs leading-relaxed">
+                      {prop.description}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* ============================================================ */}
+        {/* 3. INDUSTRY FOCUS / AUDIENCE STRIP                           */}
+        {/* ============================================================ */}
+        <section className="border-b border-slate-800/80 bg-[#101827] py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
               <span className="text-xs uppercase tracking-widest text-slate-400 font-semibold">
@@ -257,7 +356,7 @@ export default function Home({ onOpenQuote }) {
         </section>
 
         {/* ============================================================ */}
-        {/* 3. CORE SERVICES PREVIEW                                     */}
+        {/* 4. CORE SERVICES PREVIEW                                     */}
         {/* ============================================================ */}
         <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
@@ -329,10 +428,10 @@ export default function Home({ onOpenQuote }) {
                 Service #07 • Productivity &amp; Speed
               </span>
               <h4 className="text-xl font-display font-bold text-white">
-                Business Automation &amp; Instant WhatsApp Ingestion
+                Business Automation &amp; Instant Lead Ingestion
               </h4>
               <p className="text-slate-400 text-xs sm:text-sm max-w-xl">
-                Automatically route web leads directly to WhatsApp, synchronize Calendly bookings, and eliminate manual intake friction.
+                Automatically route web leads directly to WhatsApp, synchronize appointment bookings, and eliminate manual intake friction.
               </p>
             </div>
             <Link
@@ -345,7 +444,7 @@ export default function Home({ onOpenQuote }) {
         </section>
 
         {/* ============================================================ */}
-        {/* 4. FEATURED CONCEPT WORK (3 DEMONSTRATION PROJECTS)          */}
+        {/* 5. FEATURED CONCEPT WORK (3 DEMONSTRATION PROJECTS)          */}
         {/* ============================================================ */}
         <section className="py-24 bg-[#0B0F19] border-y border-slate-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -359,7 +458,7 @@ export default function Home({ onOpenQuote }) {
               <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
                 Explore three handcrafted demonstration concept websites. Built to showcase our responsive UI/UX standards, appointment booking architecture, and conversion craftsmanship.
               </p>
-              <div className="inline-block p-2 rounded-lg bg-slate-900/80 border border-slate-800 text-[11px] text-slate-400">
+              <div className="inline-block p-2 rounded-lg bg-slate-900/80 border border-slate-800 text-[11px] text-slate-300">
                 Notice: These are concept demonstration prototypes created to illustrate technical capabilities.
               </div>
             </div>
@@ -382,7 +481,7 @@ export default function Home({ onOpenQuote }) {
                         {project.badge}
                       </span>
                       <span className="text-[11px] text-emerald-400 font-medium">
-                        Concept Prototype
+                        Concept Demo
                       </span>
                     </div>
 
@@ -395,11 +494,11 @@ export default function Home({ onOpenQuote }) {
                       </p>
                     </div>
 
-                    {/* Metrics row */}
+                    {/* Architecture specifications row */}
                     <div className="grid grid-cols-3 gap-2 pt-3 border-t border-slate-800/80">
                       {project.metrics.map((m, idx) => (
                         <div key={idx} className="text-center">
-                          <span className="text-xs font-bold text-white block">
+                          <span className="text-xs font-semibold text-white block">
                             {m.value}
                           </span>
                           <span className="text-[9px] text-slate-400 uppercase tracking-wider block">
@@ -454,100 +553,91 @@ export default function Home({ onOpenQuote }) {
         </section>
 
         {/* ============================================================ */}
-        {/* 5. THE YOUMIKA ADVANTAGE (WHY CHOOSE US)                     */}
+        {/* 6. OUR PROJECT DELIVERY PROCESS (IMPROVED TRUST)              */}
         {/* ============================================================ */}
         <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-6 space-y-6">
-              <span className="text-xs font-semibold text-[#56B4FF] uppercase tracking-wider">
-                Founder-Led Engineering
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight">
-                No Sales Middlemen. <br />
-                Direct Collaboration with Your Developer.
-              </h2>
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                Most agencies assign your project to an account manager who hands it to a junior intern. At Youmika Digital, you collaborate directly with founder and developer Abhishek. This ensures razor-sharp execution, faster feedback cycles, and zero communication lost in translation.
-              </p>
+          <div className="text-center max-w-2xl mx-auto space-y-3 mb-16">
+            <span className="text-xs font-semibold text-[#56B4FF] uppercase tracking-wider">
+              How We Work
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight">
+              A Clear, Predictable Delivery Process
+            </h2>
+            <p className="text-slate-400 text-sm">
+              From our first conversation to final production handover, every milestone is structured and transparent.
+            </p>
+          </div>
 
-              <div className="space-y-3.5 pt-2">
-                {[
-                  {
-                    title: "Bespoke Modern Code (No Generic AI Templates)",
-                    desc: "Handcrafted React and Tailwind code designed specifically for your brand identity and conversion goals."
-                  },
-                  {
-                    title: "Lighthouse 95+ Core Web Vitals",
-                    desc: "Blazing fast load times that reduce bounce rates, boost mobile experience, and satisfy Google ranking factors."
-                  },
-                  {
-                    title: "India & USA Time-Zone Fluency",
-                    desc: "Dedicated communication overlap hours for US clients with native-quality English fluency and clear documentation."
-                  },
-                  {
-                    title: "Honest, Transparent Pricing",
-                    desc: "Fixed package pricing from ₹4,999 ($199). No hidden maintenance trap, no fake discount markups."
-                  }
-                ].map((point, idx) => (
-                  <div key={idx} className="flex items-start gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800/80">
-                    <CheckCircle2 className="w-5 h-5 text-[#56B4FF] shrink-0 mt-0.5" />
-                    <div>
-                      <strong className="text-white text-sm font-semibold block">
-                        {point.title}
-                      </strong>
-                      <span className="text-slate-400 text-xs">
-                        {point.desc}
-                      </span>
-                    </div>
-                  </div>
-                ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {deliveryProcess.map((step, idx) => (
+              <div
+                key={idx}
+                className="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 relative space-y-3 flex flex-col justify-between"
+              >
+                <div className="space-y-3">
+                  <span className="text-3xl font-display font-extrabold text-[#2478D4] block">
+                    {step.step}
+                  </span>
+                  <h3 className="text-base font-display font-bold text-white">
+                    {step.title}
+                  </h3>
+                  <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                    {step.desc}
+                  </p>
+                </div>
+                <div className="pt-2">
+                  <span className="inline-block w-8 h-1 bg-[#2478D4] rounded-full" />
+                </div>
               </div>
-            </div>
+            ))}
+          </div>
+        </section>
 
-            {/* Right: Founder Profile Box */}
-            <div className="lg:col-span-6">
-              <div className="p-8 sm:p-10 rounded-2xl bg-gradient-to-b from-[#131D31] to-[#0F172A] border border-slate-700/80 shadow-2xl relative">
-                <div className="space-y-6">
-                  <div className="flex items-center gap-4">
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#2478D4] to-slate-800 border-2 border-[#56B4FF]/40 flex items-center justify-center text-white font-display font-extrabold text-2xl shadow-lg shadow-[#2478D4]/20">
-                      A
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-display font-bold text-white">
-                        Abhishek
-                      </h3>
-                      <span className="text-xs font-semibold text-[#56B4FF] block">
-                        Founder &amp; Lead Full-Stack Developer
-                      </span>
-                      <span className="text-xs text-slate-400">
-                        Youmika Digital • Serving India &amp; USA
-                      </span>
-                    </div>
+        {/* ============================================================ */}
+        {/* 7. FOUNDER SECTION (ABHISHEK — AUTHENTIC TRUST)               */}
+        {/* ============================================================ */}
+        <section className="py-20 bg-[#0B0F19] border-y border-slate-800">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-slate-900 via-[#131D31] to-slate-900 border border-slate-800 shadow-2xl">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div className="lg:col-span-4 text-center lg:text-left space-y-4">
+                  <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-[#2478D4] to-slate-900 border-2 border-[#56B4FF]/40 flex items-center justify-center text-white font-display font-extrabold text-4xl shadow-xl shadow-[#2478D4]/20 mx-auto lg:mx-0">
+                    A
                   </div>
-
-                  <blockquote className="text-slate-300 text-sm italic leading-relaxed border-l-2 border-[#2478D4] pl-4">
-                    "My vision for Youmika Digital is simple: deliver agency-grade design and engineering at transparent, fair pricing—without the corporate bloat or fake promises. Every website we build is crafted to be an active revenue-generating asset."
-                  </blockquote>
-
-                  <div className="grid grid-cols-2 gap-3 pt-2 text-xs">
-                    <div className="p-3 rounded-lg bg-slate-900 border border-slate-800">
-                      <span className="text-slate-400 block">Personal Commitment</span>
-                      <strong className="text-white">100% Quality Guarantee</strong>
-                    </div>
-                    <div className="p-3 rounded-lg bg-slate-900 border border-slate-800">
-                      <span className="text-slate-400 block">Communication</span>
-                      <strong className="text-white">WhatsApp &amp; Video Calls</strong>
-                    </div>
+                  <div>
+                    <h3 className="text-2xl font-display font-bold text-white">
+                      Abhishek
+                    </h3>
+                    <span className="text-xs font-semibold text-[#56B4FF] block">
+                      Founder &amp; Lead Full-Stack Developer
+                    </span>
+                    <span className="text-xs text-slate-400">
+                      Youmika Digital • Serving India &amp; USA
+                    </span>
                   </div>
+                </div>
 
-                  <div className="pt-2">
+                <div className="lg:col-span-8 space-y-4 text-slate-300 text-sm leading-relaxed">
+                  <p>
+                    "At Youmika Digital, I personally design and code your digital experience. I founded this agency with a simple conviction: small businesses, clinics, and ambitious startups deserve clean, high-performance websites without inflated agency retainers or junior handoffs."
+                  </p>
+                  <p>
+                    When you reach out, you speak directly with me. We establish honest timelines, transparent scope, and predictable fixed pricing starting at ₹4,999 ($199 USD).
+                  </p>
+
+                  <div className="pt-3 flex flex-wrap items-center gap-4">
                     <Link
-                      to="/about"
-                      className="w-full py-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold flex items-center justify-center gap-2 transition-colors border border-slate-700"
+                      to="/contact"
+                      className="px-6 py-2.5 rounded-lg bg-[#2478D4] hover:bg-[#1D63B5] text-white text-xs font-semibold transition-colors shadow-md"
                     >
-                      <span>Read Our Development Philosophy</span>
-                      <ArrowRight className="w-4 h-4 text-[#56B4FF]" />
+                      Discuss Your Project with Abhishek
                     </Link>
+                    <a
+                      href="mailto:web@youmika.site"
+                      className="text-xs font-mono text-slate-300 hover:text-[#56B4FF] transition-colors"
+                    >
+                      web@youmika.site
+                    </a>
                   </div>
                 </div>
               </div>
@@ -556,99 +646,97 @@ export default function Home({ onOpenQuote }) {
         </section>
 
         {/* ============================================================ */}
-        {/* 6. TRANSPARENT PRICING SNAPSHOT                              */}
+        {/* 8. TRANSPARENT PRICING SNAPSHOT                              */}
         {/* ============================================================ */}
-        <section className="py-24 bg-[#0B0F19] border-t border-slate-800">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-2xl mx-auto space-y-3 mb-16">
-              <span className="text-xs font-semibold text-[#56B4FF] uppercase tracking-wider">
-                Straightforward Investment
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight">
-                Clear Packages. No Hidden Costs.
-              </h2>
-              <p className="text-slate-400 text-sm leading-relaxed">
-                Realistic pricing tailored to grow with your business. Choose a package or request a customized scope for USA operations.
-              </p>
-            </div>
+        <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto space-y-3 mb-16">
+            <span className="text-xs font-semibold text-[#56B4FF] uppercase tracking-wider">
+              Straightforward Investment
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight">
+              Clear Packages. No Hidden Costs.
+            </h2>
+            <p className="text-slate-400 text-sm leading-relaxed">
+              Realistic pricing tailored to grow with your business. Choose a package or request a customized scope for USA operations.
+            </p>
+          </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan) => (
-                <div
-                  key={plan.id}
-                  className={`rounded-2xl p-7 flex flex-col justify-between transition-all duration-300 relative ${
-                    plan.isPopular
-                      ? "bg-gradient-to-b from-[#131D31] via-[#101827] to-[#101827] border-2 border-[#2478D4] shadow-2xl shadow-[#2478D4]/10 md:-translate-y-2"
-                      : "bg-[#101827] border border-slate-800"
-                  }`}
-                >
-                  {plan.isPopular && (
-                    <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#2478D4] text-white shadow-md">
-                      Recommended for Growth
-                    </span>
-                  )}
-
-                  <div className="space-y-6">
-                    <div>
-                      <span className="text-xs font-semibold text-[#56B4FF] uppercase tracking-wider">
-                        {plan.badge}
-                      </span>
-                      <h3 className="text-xl font-display font-bold text-white mt-1">
-                        {plan.name}
-                      </h3>
-                      <p className="text-xs text-slate-400 mt-2 min-h-[36px]">
-                        {plan.idealFor}
-                      </p>
-                    </div>
-
-                    <div className="pt-2 pb-4 border-y border-slate-800">
-                      <div className="flex items-baseline gap-2">
-                        <span className="text-3xl sm:text-4xl font-display font-extrabold text-white">
-                          {plan.priceINR}
-                        </span>
-                        <span className="text-xs text-slate-400">/ {plan.priceUSD} USD</span>
-                      </div>
-                      <span className="text-[11px] text-slate-400 block mt-1">
-                        Turnaround: <strong className="text-slate-300">{plan.turnaround}</strong> • {plan.revisions}
-                      </span>
-                    </div>
-
-                    <ul className="space-y-2.5 text-xs text-slate-300">
-                      {plan.deliverables.slice(0, 5).map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-2">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-[#56B4FF] shrink-0 mt-0.5" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="pt-8">
-                    <Link
-                      to={plan.ctaLink}
-                      className={`w-full py-3 rounded-lg text-xs font-semibold flex items-center justify-center gap-2 transition-all ${
-                        plan.isPopular
-                          ? "bg-[#2478D4] hover:bg-[#1D63B5] text-white shadow-lg shadow-[#2478D4]/30"
-                          : "bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700"
-                      }`}
-                    >
-                      <span>{plan.ctaText}</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-12 text-center">
-              <Link
-                to="/pricing"
-                className="text-xs font-semibold text-[#56B4FF] hover:text-white inline-flex items-center gap-1.5 transition-colors"
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan) => (
+              <div
+                key={plan.id}
+                className={`rounded-2xl p-7 flex flex-col justify-between transition-all duration-300 relative ${
+                  plan.isPopular
+                    ? "bg-gradient-to-b from-[#131D31] via-[#101827] to-[#101827] border-2 border-[#2478D4] shadow-2xl shadow-[#2478D4]/10 md:-translate-y-2"
+                    : "bg-[#101827] border border-slate-800"
+                }`}
               >
-                <span>Read detailed feature breakdowns &amp; USA quotation notes</span>
-                <ChevronRight className="w-4 h-4" />
-              </Link>
-            </div>
+                {plan.isPopular && (
+                  <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#2478D4] text-white shadow-md">
+                    Recommended for Growth
+                  </span>
+                )}
+
+                <div className="space-y-6">
+                  <div>
+                    <span className="text-xs font-semibold text-[#56B4FF] uppercase tracking-wider">
+                      {plan.badge}
+                    </span>
+                    <h3 className="text-xl font-display font-bold text-white mt-1">
+                      {plan.name}
+                    </h3>
+                    <p className="text-xs text-slate-400 mt-2 min-h-[36px]">
+                      {plan.idealFor}
+                    </p>
+                  </div>
+
+                  <div className="pt-2 pb-4 border-y border-slate-800">
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-3xl sm:text-4xl font-display font-extrabold text-white">
+                        {plan.priceINR}
+                      </span>
+                      <span className="text-xs text-slate-400">/ {plan.priceUSD} USD</span>
+                    </div>
+                    <span className="text-[11px] text-slate-400 block mt-1">
+                      Turnaround: <strong className="text-slate-300">{plan.turnaround}</strong> • {plan.revisions}
+                    </span>
+                  </div>
+
+                  <ul className="space-y-2.5 text-xs text-slate-300">
+                    {plan.deliverables.slice(0, 5).map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#56B4FF] shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="pt-8">
+                  <Link
+                    to={plan.ctaLink}
+                    className={`w-full py-3 rounded-lg text-xs font-semibold flex items-center justify-center gap-2 transition-all ${
+                      plan.isPopular
+                        ? "bg-[#2478D4] hover:bg-[#1D63B5] text-white shadow-lg shadow-[#2478D4]/30"
+                        : "bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700"
+                    }`}
+                  >
+                    <span>{plan.ctaText}</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link
+              to="/pricing"
+              className="text-xs font-semibold text-[#56B4FF] hover:text-white inline-flex items-center gap-1.5 transition-colors"
+            >
+              <span>Read detailed feature breakdowns &amp; USA quotation notes</span>
+              <ChevronRight className="w-4 h-4" />
+            </Link>
           </div>
         </section>
       </div>
@@ -663,4 +751,3 @@ export default function Home({ onOpenQuote }) {
     </>
   );
 }
-

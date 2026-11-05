@@ -37,7 +37,7 @@ export default function About({ onOpenQuote }) {
     {
       step: "04",
       name: "Performance Tuning & Production Launch",
-      desc: "Comprehensive testing across devices, Google Lighthouse 95+ speed tuning, on-page SEO schema implementation, domain DNS setup, and zero-downtime deployment."
+      desc: "Cross-device responsiveness testing, modern asset optimization, on-page SEO schema implementation, domain DNS configuration, and secure production deployment."
     }
   ];
 
@@ -148,10 +148,10 @@ export default function About({ onOpenQuote }) {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { title: "Sub-Second Speed", desc: "Optimized bundles, modern image formats, and responsive code." },
-              { title: "Mobile Touch Ergonomics", desc: "Every button and form element tested for one-handed thumb reach." },
+              { title: "Performance-Focused Code", desc: "Lightweight React architecture, modern asset compression, and clean modular CSS." },
+              { title: "Mobile Touch Ergonomics", desc: "Every button, card, and form element tested for one-handed thumb reach." },
               { title: "Semantic SEO Standards", desc: "Clean H1-H6 hierarchy, Schema.org JSON-LD, and valid metadata." },
-              { title: "Security & Clean Code", desc: "No bloated plugins with hidden vulnerabilities. Modern secure code." }
+              { title: "Security & Clean Code", desc: "No bloated plugins with hidden vulnerabilities. Modern, secure, maintainable code." }
             ].map((q, idx) => (
               <div key={idx} className="p-4 rounded-xl bg-slate-950 border border-slate-800/80 space-y-1.5">
                 <CheckCircle2 className="w-5 h-5 text-emerald-400" />

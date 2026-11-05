@@ -35,7 +35,7 @@ export default function Footer() {
                 <ArrowUpRight className="w-4 h-4" />
               </Link>
               <a
-                href="https://wa.me/?text=Hi%20Youmika%20Digital,%20I%20would%20like%20to%20discuss%20a%20website%20project"
+                href="https://api.whatsapp.com/send?text=Hi%20Youmika%20Digital%2C%20I%20would%20like%20to%20discuss%20a%20website%20project"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white font-semibold text-sm border border-slate-700 transition-colors"

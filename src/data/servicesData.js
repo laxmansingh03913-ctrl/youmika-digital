@@ -63,7 +63,7 @@ export const servicesData = [
     deliverables: [
       "Conversion-architected page layout and persuasive copy flow",
       "Dynamic lead capture form with instant email / CRM notifications",
-      "Speed-optimized assets loading in under 1.5 seconds",
+      "Lightweight assets optimized for rapid rendering across devices",
       "Analytics and pixel tracking integration"
     ],
     ctaText: "Build a High-Converting Landing Page",
@@ -147,7 +147,7 @@ export const servicesData = [
     icon: "Cpu",
     tag: "Efficiency & Speed",
     benefits: [
-      "Instant lead response within seconds, boosting conversion probability by up to 391%",
+      "Instant lead response within seconds, capturing prospect inquiries before they contact competitors",
       "Elimination of repetitive manual data entry and calendar coordination",
       "Automated appointment booking with SMS/WhatsApp confirmation reminders",
       "Seamless synchronization between web forms, Google Sheets, and CRM tools"
