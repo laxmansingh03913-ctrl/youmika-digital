@@ -120,6 +120,16 @@ export default function ProjectModal({ project, onClose }) {
                     </div>
                   )}
 
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition-colors"
+                  >
+                    Open the full live demo website
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+
                   {/* Simulated Services Chips */}
                   <div className="pt-4 border-t border-slate-700/50">
                     <span className="text-xs text-slate-400 block mb-2 font-medium">
@@ -227,6 +237,15 @@ export default function ProjectModal({ project, onClose }) {
             >
               Close
             </button>
+            <a
+              href={project.demoUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold transition-all shadow-md"
+            >
+              Open Live Demo
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
             <a
               href={`/contact?service=Website%20Development&projectType=${encodeURIComponent(project.title)}`}
               className="px-4 py-2 rounded-lg bg-[#2478D4] hover:bg-[#1D63B5] text-white text-xs font-semibold transition-all shadow-md"

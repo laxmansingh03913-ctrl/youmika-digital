@@ -142,6 +142,16 @@ export default function Portfolio({ onOpenQuote }) {
                         <span>Launch Interactive Demo Window</span>
                       </button>
 
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-semibold shadow-lg shadow-emerald-600/30 hover:scale-105 active:scale-95 transition-all"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        <span>View Live Demo Website</span>
+                      </a>
+
                       <Link
                         to={`/contact?service=Website%20Development&projectType=${encodeURIComponent(project.title)}`}
                         className="text-xs font-medium text-slate-300 hover:text-white flex items-center gap-1 transition-colors"
@@ -163,7 +173,7 @@ export default function Portfolio({ onOpenQuote }) {
                           <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
                         </div>
                         <span className="text-[10px] font-mono text-slate-500">
-                          https://demo.{project.id}.youmika.site
+                          https://digital.youmika.site{project.demoUrl}
                         </span>
                         <div className="text-[10px] text-slate-400">SSL Secure</div>
                       </div>
@@ -188,13 +198,16 @@ export default function Portfolio({ onOpenQuote }) {
                         </p>
 
                         <div className="pt-2">
-                          <button
-                            onClick={() => setSelectedProject(project)}
-                            className="px-5 py-2.5 rounded-lg text-xs font-semibold text-white shadow-md hover:opacity-90 transition-opacity"
+                          <a
+                            href={project.demoUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-lg text-xs font-semibold text-white shadow-md hover:opacity-90 transition-opacity"
                             style={{ backgroundColor: project.accentColor }}
                           >
-                            {project.mockupDetails.primaryAction} (Test Live)
-                          </button>
+                            {project.mockupDetails.primaryAction} — Live Demo
+                            <ExternalLink className="w-3.5 h-3.5" />
+                          </a>
                         </div>
 
                         {/* Metrics Bar */}

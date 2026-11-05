@@ -1,6 +1,7 @@
 export const projectsData = [
   {
     id: "dental-clinic",
+    demoUrl: "/demo-apex-dental.html",
     badge: "Healthcare & Clinics",
     type: "Concept Demonstration Project",
     title: "Apex Dental & Implant Center",
@@ -32,6 +33,7 @@ export const projectsData = [
   },
   {
     id: "modern-gym",
+    demoUrl: "/demo-ironpulse-gym.html",
     badge: "Fitness & Wellness",
     type: "Concept Demonstration Project",
     title: "IronPulse Athletic Club",
@@ -63,6 +65,7 @@ export const projectsData = [
   },
   {
     id: "premium-restaurant",
+    demoUrl: "/demo-saffron-sage.html",
     badge: "Hospitality & Dining",
     type: "Concept Demonstration Project",
     title: "Saffron & Sage Fine Bistro",
