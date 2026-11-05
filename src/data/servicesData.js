@@ -160,6 +160,30 @@ export const servicesData = [
     ],
     ctaText: "Automate Your Workflows",
     ctaLink: "/contact?service=Business%20Automation"
+  },
+  {
+    id: "complete-business-management",
+    number: "08",
+    title: "Complete Business Management",
+    shortDescription: "Your entire business, managed online — website, social media, leads, bookings, and reviews, handled for you every month.",
+    longDescription: "A website alone doesn't grow a business. We take over your complete online presence — posting on social media, keeping your Google profile fresh, answering leads fast, managing bookings, and collecting reviews — so customers keep coming while you focus on your work. One team, one monthly plan, everything handled.",
+    icon: "Briefcase",
+    tag: "Monthly Partner",
+    benefits: [
+      "One team managing your website, social media, and Google presence — no juggling multiple freelancers",
+      "Leads answered within minutes, not hours — so enquiries never go cold",
+      "Bookings, reviews, and follow-ups handled every day without you lifting a finger",
+      "One clear monthly report: enquiries, bookings, and growth — no confusing jargon"
+    ],
+    deliverables: [
+      "Regular social media posts (Instagram + Facebook) with creatives and captions",
+      "Google Business Profile management: posts, photos, reviews, and Q&A",
+      "Lead follow-up on WhatsApp and enquiry forms within minutes",
+      "Booking and appointment calendar management with reminders",
+      "Monthly growth report with enquiries, bookings, and next steps"
+    ],
+    ctaText: "Let Us Manage Your Business",
+    ctaLink: "/contact?service=Complete%20Business%20Management"
   }
 ];
 

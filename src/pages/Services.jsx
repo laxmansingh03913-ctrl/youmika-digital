@@ -8,6 +8,7 @@ import {
   TrendingUp, 
   ShieldCheck, 
   Cpu, 
+  Briefcase,
   CheckCircle2, 
   ArrowRight, 
   ChevronRight,
@@ -25,7 +26,8 @@ const iconMap = {
   Search,
   TrendingUp,
   ShieldCheck,
-  Cpu
+  Cpu,
+  Briefcase
 };
 
 export default function Services({ onOpenQuote }) {

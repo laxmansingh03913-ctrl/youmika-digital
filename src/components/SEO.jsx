@@ -6,7 +6,7 @@ export default function SEO({ title, description, canonicalPath = "" }) {
     const fullTitle = title ? `${title} | Youmika Digital` : defaultTitle;
     document.title = fullTitle;
 
-    const defaultDesc = "We Build Digital Experiences That Grow Businesses. From stunning websites to powerful digital strategies, we help businesses turn their online presence into real opportunities.";
+    const defaultDesc = "We manage your entire business online — websites, social media, leads, bookings, and reviews — so you can focus on running your business.";
     const metaDesc = description || defaultDesc;
 
     // Update meta description

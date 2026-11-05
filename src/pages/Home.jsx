@@ -85,8 +85,8 @@ export default function Home({ onOpenQuote }) {
   return (
     <>
       <SEO 
-        title="We Build Digital Experiences That Grow Businesses" 
-        description="Youmika Digital is a modern, reliable digital agency for businesses in India and the USA. Founder-led web development, UI/UX design, and SEO."
+        title="We Manage Your Entire Business Online | Youmika Digital" 
+        description="Youmika Digital manages your entire business online — websites, social media, leads, bookings, and reviews — for businesses in India and the USA."
         canonicalPath="/"
       />
 
@@ -109,15 +109,15 @@ export default function Home({ onOpenQuote }) {
 
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-white leading-[1.12]">
-              We Build Digital Experiences <br className="hidden sm:inline" />
+              We Don't Just Build Websites — <br className="hidden sm:inline" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#56B4FF] via-[#2478D4] to-blue-400">
-                That Grow Businesses.
+                We Manage Your Entire Business Online.
               </span>
             </h1>
 
             {/* Subheading */}
             <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
-              From stunning websites to powerful digital strategies, we help businesses turn their online presence into real opportunities.
+              Websites, social media, leads, bookings, and reviews — one team handles your complete online presence while you focus on running your business.
             </p>
 
             {/* CTAs */}
