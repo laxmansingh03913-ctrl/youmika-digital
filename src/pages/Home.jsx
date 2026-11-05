@@ -7,7 +7,6 @@ import {
   Sparkles, 
   Layers, 
   ShieldCheck, 
-  Zap, 
   Eye, 
   Code2, 
   Cpu, 
@@ -22,8 +21,7 @@ import {
   Tag,
   MessageCircle,
   FileCheck,
-  Rocket,
-  Compass
+  Rocket
 } from "lucide-react";
 import SEO from "../components/SEO";
 import { servicesData } from "../data/servicesData";
@@ -37,23 +35,23 @@ export default function Home({ onOpenQuote }) {
   // 4 Core Honest Value Propositions
   const coreValueProps = [
     {
-      title: "Founder-Led Development",
-      description: "Direct engineering with founder and developer Abhishek. No junior interns, no account manager telephone games.",
+      title: "You Talk to Me, Not a Team",
+      description: "I'm Abhishek. I design and build your website myself. No juniors, no account managers, no middlemen.",
       icon: UserCheck
     },
     {
-      title: "Performance-Focused Websites",
-      description: "Lightweight, responsive React code crafted for fast load speeds, clean typography, and seamless mobile touch ergonomics.",
+      title: "Fast Websites That Work on Phones",
+      description: "Light, fast pages that load quickly and look right on any phone — because that's where your customers are.",
       icon: Gauge
     },
     {
-      title: "Transparent Pricing",
-      description: "Clear, upfront packages starting from ₹5,999 ($199). No hidden maintenance traps, no inflated quotes or fake discount tricks.",
+      title: "Clear Prices, No Surprises",
+      description: "Packages start at ₹5,999 ($199). The price I quote is the price you pay — no hidden charges later.",
       icon: Tag
     },
     {
-      title: "Direct Client Communication",
-      description: "Responsive support via WhatsApp, email (web@youmika.site), and video calls with dedicated overlap hours for India & USA.",
+      title: "Talk to Me Directly",
+      description: "WhatsApp, email (web@youmika.site), or a video call — you always reach me directly, in India or the USA.",
       icon: MessageCircle
     }
   ];
@@ -62,23 +60,23 @@ export default function Home({ onOpenQuote }) {
   const deliveryProcess = [
     {
       step: "01",
-      title: "Discovery & Strategy",
-      desc: "We discuss your target audience, business goals, and required features to outline a clear project roadmap before writing any code."
+      title: "We Talk",
+      desc: "You tell me what your business needs — more calls, more bookings, more sales. I ask questions until I understand it properly."
     },
     {
       step: "02",
-      title: "High-Fidelity Design",
-      desc: "We craft clean, modern visual layouts focused on strong visual hierarchy, brand consistency, and frictionless mobile navigation."
+      title: "I Design",
+      desc: "I show you a simple design first. You tell me what you like and what you don't, and we fix it before any code is written."
     },
     {
       step: "03",
-      title: "Clean-Code Engineering",
-      desc: "We develop your website using modern React and Tailwind CSS, ensuring clean semantic structure and maintainable architecture."
+      title: "I Build",
+      desc: "I write the code myself — clean, fast, and easy to change later. No heavy page builders, no bloated plugins."
     },
     {
       step: "04",
-      title: "Launch & Production Handoff",
-      desc: "We test responsiveness across all devices, configure your domain DNS, deploy to secure cloud hosting, and hand over complete ownership."
+      title: "You Go Live",
+      desc: "We test it on phones and computers, connect your domain, and launch. The website is fully yours — files, domain, everything."
     }
   ];
 
@@ -143,19 +141,19 @@ export default function Home({ onOpenQuote }) {
             <div className="pt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-300 font-medium">
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-[#56B4FF]" />
-                <span>Founder-Led Development</span>
+                <span>Built by Abhishek himself</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-[#56B4FF]" />
-                <span>Performance-Focused Websites</span>
+                <span>Fast on every phone</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-[#56B4FF]" />
-                <span>Transparent Packages from ₹5,999 / $199</span>
+                <span>Starts at ₹5,999 / $199</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-[#56B4FF]" />
-                <span>Direct Client Communication</span>
+                <span>Talk directly on WhatsApp</span>
               </div>
             </div>
           </div>
@@ -175,13 +173,13 @@ export default function Home({ onOpenQuote }) {
                   <span className="w-3 h-3 rounded-full bg-emerald-500/80" />
                   <div className="hidden sm:flex items-center gap-2 ml-4 px-3 py-1 rounded bg-slate-900 border border-slate-800 text-xs text-slate-400 font-mono">
                     <span className="text-emerald-400">https://</span>
-                    <span>digital.youmika.site/experience-engine</span>
+                    <span>digital.youmika.site</span>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-2 text-xs text-slate-400 font-mono">
                   <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  <span>React 19 • Fast CDN</span>
+                  <span>3 live demos — try them below</span>
                 </div>
               </div>
 
@@ -192,33 +190,33 @@ export default function Home({ onOpenQuote }) {
                   <div className="lg:col-span-7 space-y-6">
                     <div className="space-y-2">
                       <span className="text-xs font-semibold text-[#56B4FF] uppercase tracking-wider">
-                        High-Converting Digital Architecture
+                        Real Websites, Not Mockups
                       </span>
                       <h3 className="text-2xl sm:text-3xl font-display font-bold text-white">
-                        Built for Businesses That Demand Results
+                        Don't Believe the Words — Try a Demo
                       </h3>
                       <p className="text-slate-300 text-sm leading-relaxed">
-                        We blend high-impact aesthetics with clean technical execution. Every element is structured to establish authority, capture qualified inquiries, and provide a seamless mobile user experience.
+                        These are real websites I built. Click one, use the booking form, try the filters. That's exactly what your business will get.
                       </p>
                     </div>
 
                     {/* Value Pillars (Replaces unverified statistics) */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       <div className="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800">
-                        <span className="text-xs font-semibold text-white block mb-0.5">Founder-Led Build</span>
-                        <span className="text-[11px] text-slate-400 block">Direct code craft with Abhishek</span>
+                        <span className="text-xs font-semibold text-white block mb-0.5">Built by Me, Abhishek</span>
+                        <span className="text-[11px] text-slate-400 block">No juniors, no outsourcing</span>
                       </div>
                       <div className="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800">
-                        <span className="text-xs font-semibold text-white block mb-0.5">Clean Code Architecture</span>
-                        <span className="text-[11px] text-slate-400 block">Lightweight React &amp; Tailwind CSS</span>
+                        <span className="text-xs font-semibold text-white block mb-0.5">Fast, Light Code</span>
+                        <span className="text-[11px] text-slate-400 block">Loads quickly on any phone</span>
                       </div>
                       <div className="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800">
-                        <span className="text-xs font-semibold text-white block mb-0.5">Mobile-First Layouts</span>
-                        <span className="text-[11px] text-slate-400 block">Ergonomic touch navigation</span>
+                        <span className="text-xs font-semibold text-white block mb-0.5">Made for Phones First</span>
+                        <span className="text-[11px] text-slate-400 block">Big buttons, easy to tap</span>
                       </div>
                       <div className="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800">
-                        <span className="text-xs font-semibold text-white block mb-0.5">Transparent Investment</span>
-                        <span className="text-[11px] text-slate-400 block">Predictable fixed-cost pricing</span>
+                        <span className="text-xs font-semibold text-white block mb-0.5">Prices from ₹5,999</span>
+                        <span className="text-[11px] text-slate-400 block">No surprises, no hidden charges</span>
                       </div>
                     </div>
 
@@ -239,30 +237,48 @@ export default function Home({ onOpenQuote }) {
                     </div>
                   </div>
 
-                  {/* Right Column: Code & Interactive Visual Card */}
+                  {/* Right Column: Real Live Demos */}
                   <div className="lg:col-span-5 space-y-3">
-                    <div className="p-5 rounded-xl bg-slate-900/95 border border-slate-800 font-mono text-xs text-slate-300 space-y-2.5 shadow-inner">
-                      <div className="flex items-center justify-between text-slate-400 pb-2 border-b border-slate-800 text-[11px]">
-                        <span>youmika.engine.config.ts</span>
-                        <span className="text-emerald-400">Production Ready</span>
-                      </div>
-                      <p><span className="text-purple-400">export const</span> <span className="text-blue-300">agencyStack</span> = &#123;</p>
-                      <p className="pl-4"><span className="text-slate-400">founder:</span> <span className="text-emerald-300">"Abhishek"</span>,</p>
-                      <p className="pl-4"><span className="text-slate-400">email:</span> <span className="text-cyan-300">"web@youmika.site"</span>,</p>
-                      <p className="pl-4"><span className="text-slate-400">regions:</span> [<span className="text-emerald-300">"India"</span>, <span className="text-emerald-300">"USA"</span>],</p>
-                      <p className="pl-4"><span className="text-slate-400">approach:</span> <span className="text-emerald-300">"Clean Modern Code"</span>,</p>
-                      <p className="pl-4"><span className="text-slate-400">pricingStartsAt:</span> <span className="text-cyan-300">"₹5,999 / $199"</span></p>
-                      <p>&#125;;</p>
-                    </div>
+                    {[
+                      { img: "/demo-img/dental/dental-hero.webp", name: "Apex Dental", try: "Book an appointment", url: "/demo-apex-dental.html" },
+                      { img: "/demo-img/gym/hero.jpg", name: "IronPulse Gym", try: "Try the class filter", url: "/demo-ironpulse-gym.html" },
+                      { img: "/demo-img/restaurant/restaurant-hero.webp", name: "Saffron & Sage", try: "Reserve a table", url: "/demo-saffron-sage.html" }
+                    ].map((demo) => (
+                      <a
+                        key={demo.url}
+                        href={demo.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex items-center gap-3 p-3 rounded-xl bg-slate-900/95 border border-slate-800 hover:border-[#2478D4]/60 transition-colors group"
+                      >
+                        <img
+                          src={demo.img}
+                          alt={demo.name}
+                          className="w-16 h-12 rounded-lg object-cover shrink-0"
+                        />
+                        <div className="flex-1 min-w-0">
+                          <span className="text-sm font-semibold text-white block group-hover:text-[#56B4FF] transition-colors">
+                            {demo.name}
+                          </span>
+                          <span className="text-[11px] text-slate-400 block">
+                            {demo.try}
+                          </span>
+                        </div>
+                        <span className="text-xs font-semibold text-[#56B4FF] shrink-0 inline-flex items-center gap-1">
+                          Open
+                          <ArrowUpRight className="w-3.5 h-3.5" />
+                        </span>
+                      </a>
+                    ))}
 
-                    {/* Floating Trust Card */}
+                    {/* Honest Note */}
                     <div className="p-3.5 rounded-xl bg-[#1E293B]/80 border border-slate-700 flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-lg bg-[#2478D4]/20 border border-[#2478D4]/40 flex items-center justify-center text-[#56B4FF]">
-                        <Zap className="w-5 h-5" />
+                      <div className="w-9 h-9 rounded-lg bg-[#2478D4]/20 border border-[#2478D4]/40 flex items-center justify-center text-[#56B4FF] shrink-0">
+                        <CheckCircle2 className="w-5 h-5" />
                       </div>
                       <div className="text-xs">
-                        <strong className="text-white block font-semibold">Zero Bloat, Direct Engineering</strong>
-                        <span className="text-slate-400">Direct engineering without agency middleman markups.</span>
+                        <strong className="text-white block font-semibold">No fake screenshots — real, working websites</strong>
+                        <span className="text-slate-400">Every form, filter, and button above actually works.</span>
                       </div>
                     </div>
                   </div>
@@ -279,13 +295,13 @@ export default function Home({ onOpenQuote }) {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto space-y-2 mb-12">
               <span className="text-xs font-semibold text-[#56B4FF] uppercase tracking-wider">
-                Why Partner With Us
+                Why Work With Me
               </span>
               <h2 className="text-2xl sm:text-3xl font-display font-bold text-white">
-                Built on Honest Value, Not Inflated Claims
+                No Big Promises. Just Honest Work.
               </h2>
               <p className="text-slate-400 text-xs sm:text-sm">
-                We believe in straightforward engineering and honest business relationships.
+                Clear prices, direct communication, and websites that do their job.
               </p>
             </div>
 
@@ -320,7 +336,7 @@ export default function Home({ onOpenQuote }) {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
               <span className="text-xs uppercase tracking-widest text-slate-400 font-semibold">
-                Specialized Digital Solutions Tailored For Your Industry
+                Who I Build For
               </span>
             </div>
 
@@ -362,13 +378,13 @@ export default function Home({ onOpenQuote }) {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <div className="space-y-3 max-w-2xl">
               <span className="text-xs font-semibold text-[#56B4FF] uppercase tracking-wider">
-                Comprehensive Capabilities
+                What I Can Do
               </span>
               <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight">
-                Everything Your Business Needs to Dominate Online
+                What I Can Do for Your Business
               </h2>
               <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-                From initial design wireframing to high-performance coding and workflow automation, we engineer every touchpoint with precision.
+                Websites, marketing, bookings, and full management — pick what you need, or hand me the whole thing.
               </p>
             </div>
 
@@ -377,7 +393,7 @@ export default function Home({ onOpenQuote }) {
                 to="/services"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-[#56B4FF] hover:text-white transition-colors"
               >
-                <span>Explore All 7 Services In Detail</span>
+                <span>See all 8 services</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -425,20 +441,20 @@ export default function Home({ onOpenQuote }) {
           <div className="mt-8 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-slate-900 via-[#131D31] to-slate-900 border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="space-y-1 text-center md:text-left">
               <span className="text-xs font-semibold text-emerald-400 uppercase tracking-wider">
-                Service #07 • Productivity &amp; Speed
+                Service #08 • Monthly Partner
               </span>
               <h4 className="text-xl font-display font-bold text-white">
-                Business Automation &amp; Instant Lead Ingestion
+                Complete Business Management
               </h4>
               <p className="text-slate-400 text-xs sm:text-sm max-w-xl">
-                Automatically route web leads directly to WhatsApp, synchronize appointment bookings, and eliminate manual intake friction.
+                Website, social media, Google profile, leads, bookings, and reviews — your whole business, managed every month.
               </p>
             </div>
             <Link
-              to="/services#business-automation"
+              to="/services#complete-business-management"
               className="px-5 py-2.5 rounded-lg bg-[#2478D4] hover:bg-[#1D63B5] text-white text-xs font-semibold transition-colors shrink-0 shadow-md"
             >
-              Learn About Automation
+              See the Management Plan
             </Link>
           </div>
         </section>
@@ -453,10 +469,10 @@ export default function Home({ onOpenQuote }) {
                 Demonstration Portfolio
               </span>
               <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-white tracking-tight">
-                Designed to Inspire. Built to Convert.
+                Don't Take My Word for It — Try Them Yourself.
               </h2>
               <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-                Explore three handcrafted demonstration concept websites. Built to showcase our responsive UI/UX standards, appointment booking architecture, and conversion craftsmanship.
+                Three real demo websites I built. Click one and use it — book a table, filter the menu, try the class schedule. Your website will work the same way.
               </p>
               <div className="inline-block p-2 rounded-lg bg-slate-900/80 border border-slate-800 text-[11px] text-slate-300">
                 Notice: These are concept demonstration prototypes created to illustrate technical capabilities.
@@ -527,12 +543,21 @@ export default function Home({ onOpenQuote }) {
                         ))}
                       </div>
 
-                      <button
-                        onClick={() => setSelectedProject(project)}
-                        className="w-full py-2.5 rounded-lg bg-slate-800 hover:bg-[#2478D4] text-white text-xs font-semibold transition-all flex items-center justify-center gap-2 group-hover:bg-[#2478D4]"
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="w-full py-2.5 rounded-lg bg-[#2478D4] hover:bg-[#1D63B5] text-white text-xs font-semibold transition-all flex items-center justify-center gap-2"
                       >
                         <Eye className="w-3.5 h-3.5" />
-                        <span>Launch Live Interactive Demo</span>
+                        <span>Open Live Demo</span>
+                        <ArrowUpRight className="w-3.5 h-3.5" />
+                      </a>
+                      <button
+                        onClick={() => setSelectedProject(project)}
+                        className="w-full py-2 text-xs font-medium text-slate-400 hover:text-white transition-colors"
+                      >
+                        View details &amp; features
                       </button>
                     </div>
                   </div>
@@ -558,13 +583,13 @@ export default function Home({ onOpenQuote }) {
         <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto space-y-3 mb-16">
             <span className="text-xs font-semibold text-[#56B4FF] uppercase tracking-wider">
-              How We Work
+              How It Works
             </span>
             <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight">
-              A Clear, Predictable Delivery Process
+              Four Simple Steps
             </h2>
             <p className="text-slate-400 text-sm">
-              From our first conversation to final production handover, every milestone is structured and transparent.
+              You always know what's happening, and you always talk to me.
             </p>
           </div>
 
@@ -601,9 +626,11 @@ export default function Home({ onOpenQuote }) {
             <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-slate-900 via-[#131D31] to-slate-900 border border-slate-800 shadow-2xl">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div className="lg:col-span-4 text-center lg:text-left space-y-4">
-                  <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-[#2478D4] to-slate-900 border-2 border-[#56B4FF]/40 flex items-center justify-center text-white font-display font-extrabold text-4xl shadow-xl shadow-[#2478D4]/20 mx-auto lg:mx-0">
-                    A
-                  </div>
+                  <img
+                    src="/founder-abhishek.jpg"
+                    alt="Abhishek — Founder of Youmika Digital"
+                    className="w-24 h-24 rounded-2xl object-cover border-2 border-[#56B4FF]/40 shadow-xl shadow-[#2478D4]/20 mx-auto lg:mx-0"
+                  />
                   <div>
                     <h3 className="text-2xl font-display font-bold text-white">
                       Abhishek
@@ -619,10 +646,10 @@ export default function Home({ onOpenQuote }) {
 
                 <div className="lg:col-span-8 space-y-4 text-slate-300 text-sm leading-relaxed">
                   <p>
-                    "At Youmika Digital, I personally design and code your digital experience. I founded this agency with a simple conviction: small businesses, clinics, and ambitious startups deserve clean, high-performance websites without inflated agency retainers or junior handoffs."
+                    Hi, I'm Abhishek. I'm from Bhilwara, Rajasthan — a BCA student in Jaipur who taught himself to build websites. I started with my own reading website, Yomika, and now I help clinics, gyms, restaurants, and local businesses get customers online.
                   </p>
                   <p>
-                    When you reach out, you speak directly with me. We establish honest timelines, transparent scope, and predictable fixed pricing starting at ₹5,999 ($199 USD).
+                    When you message me, you talk to me — not a team, not a manager. I build your website myself, I answer your questions myself, and my prices start at ₹5,999 ($199). If I can't do something well, I'll tell you straight.
                   </p>
 
                   <div className="pt-3 flex flex-wrap items-center gap-4">
@@ -657,7 +684,7 @@ export default function Home({ onOpenQuote }) {
               Clear Packages. No Hidden Costs.
             </h2>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Realistic pricing tailored to grow with your business. Choose a package or request a customized scope for USA operations.
+              Pick a package that fits. Every price includes the full website — no hidden charges later.
             </p>
           </div>
 

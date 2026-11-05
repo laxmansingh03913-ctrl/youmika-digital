@@ -21,31 +21,31 @@ export default function About({ onOpenQuote }) {
   const processSteps = [
     {
       step: "01",
-      name: "Discovery & Strategic Architecture",
-      desc: "We analyze your business model, target clientele (India or USA), and primary conversion goal (calls, bookings, sales). We define the user journey before writing a single line of code."
+      name: "We Talk",
+      desc: "You tell me what your business needs — more calls, more bookings, more sales. I ask questions until I understand it properly."
     },
     {
       step: "02",
-      name: "High-Fidelity Interface Design",
-      desc: "We craft clean, modern UI/UX mockups in Figma with strong visual hierarchy, generous whitespace, brand-aligned color palettes, and frictionless mobile touch targets."
+      name: "I Design",
+      desc: "I show you a simple design first. You say what you like and what you don't, and we fix it before any code is written."
     },
     {
       step: "03",
-      name: "Agile Clean-Code Engineering",
-      desc: "We code using React, Tailwind CSS, and modern web standards. Zero bulky page-builder bloat, zero spaghetti code. Clean, modular, and maintainable architecture."
+      name: "I Build",
+      desc: "I write the code myself using React and Tailwind CSS. No bulky page builders, no messy code that's hard to change later."
     },
     {
       step: "04",
-      name: "Performance Tuning & Production Launch",
-      desc: "Cross-device responsiveness testing, modern asset optimization, on-page SEO schema implementation, domain DNS configuration, and secure production deployment."
+      name: "You Go Live",
+      desc: "We test it on phones and computers, set up your Google listing, connect your domain, and launch. The site is fully yours."
     }
   ];
 
   return (
     <>
       <SEO
-        title="About Us — Mission, Process & Engineering Standards"
-        description="Learn about Youmika Digital, our developer-led agency model, commitment to quality, and founder Abhishek. Clean code and digital experiences that grow businesses."
+        title="About — I'm Abhishek, I Run Youmika Digital"
+        description="Youmika Digital is my own one-person agency. I build websites and manage your whole business online — no team, no middlemen, no jargon."
         canonicalPath="/about"
       />
 
@@ -57,10 +57,10 @@ export default function About({ onOpenQuote }) {
             <span>Who We Are</span>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold text-white tracking-tight">
-            Engineering Digital Growth with Precision &amp; Transparency
+            One Person. Your Whole Business, Handled Online.
           </h1>
           <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-            Youmika Digital is an independent, founder-led digital agency serving ambitious businesses across India and the United States. We reject generic templates, opaque pricing, and middleman agency bloat.
+            Youmika Digital is my own agency. I build the website, I post on your social media, I answer your leads — no team, no middlemen, no jargon. Serving businesses in India and the USA.
           </p>
         </div>
 
@@ -72,10 +72,10 @@ export default function About({ onOpenQuote }) {
               <Target className="w-6 h-6" />
             </div>
             <h2 className="text-2xl font-display font-bold text-white">
-              Our Mission
+              My Mission
             </h2>
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Our mission is to help small and medium-sized businesses, healthcare clinics, fitness clubs, and restaurants turn their online presence into an active revenue-generating system. We believe every enterprise deserves a modern, lightning-fast website that inspires trust from the very first click.
+              My mission is simple: help small businesses get customers from the internet without paying agency prices or waiting weeks for replies. A good website, honest prices, and someone who actually picks up the phone.
             </p>
           </div>
 
@@ -85,10 +85,10 @@ export default function About({ onOpenQuote }) {
               <Zap className="w-6 h-6" />
             </div>
             <h2 className="text-2xl font-display font-bold text-white">
-              Our Approach
+              How I Work
             </h2>
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              We approach every website as an engineering challenge and a marketing asset. By blending conversion rate optimization (CRO) principles with performant frontend architecture, our solutions look sophisticated, load instantly, and guide visitors smoothly toward taking real-world action.
+              I start with what your business actually needs — more calls, more bookings, or more sales — then build the simplest thing that gets you that. No extra features you didn't ask for, no pages nobody reads.
             </p>
           </div>
         </div>
@@ -97,13 +97,13 @@ export default function About({ onOpenQuote }) {
         <div className="space-y-12">
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <span className="text-xs font-semibold text-[#56B4FF] uppercase tracking-wider">
-              Methodology
+              How It Works
             </span>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-white">
-              Our 4-Stage Development Process
+              Four Simple Steps
             </h2>
             <p className="text-slate-400 text-sm">
-              Predictable, structured, and collaborative sprints from discovery to live deployment.
+              You always know what's happening, and you always talk to me.
             </p>
           </div>
 
@@ -136,22 +136,22 @@ export default function About({ onOpenQuote }) {
         <div className="p-8 sm:p-12 rounded-3xl bg-slate-900 border border-slate-800 space-y-8">
           <div className="max-w-2xl space-y-3">
             <span className="text-xs font-semibold text-emerald-400 uppercase tracking-wider">
-              Standards We Never Compromise On
+              What You Can Count On
             </span>
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-white">
-              Our Commitment to Technical Quality
+              Four Things I Never Compromise On
             </h2>
             <p className="text-slate-400 text-sm">
-              Every deliverable from Youmika Digital is held to international development benchmarks:
+              Every website I deliver is checked on these four points before it goes live:
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { title: "Performance-Focused Code", desc: "Lightweight React architecture, modern asset compression, and clean modular CSS." },
-              { title: "Mobile Touch Ergonomics", desc: "Every button, card, and form element tested for one-handed thumb reach." },
-              { title: "Semantic SEO Standards", desc: "Clean H1-H6 hierarchy, Schema.org JSON-LD, and valid metadata." },
-              { title: "Security & Clean Code", desc: "No bloated plugins with hidden vulnerabilities. Modern, secure, maintainable code." }
+              { title: "Fast, Light Code", desc: "No heavy plugins. Pages load quickly, even on slow mobile internet." },
+              { title: "Works Well on Phones", desc: "Every button and form tested for one-handed use on a phone." },
+              { title: "Google-Friendly Structure", desc: "Clean headings, proper metadata, and business details Google can read." },
+              { title: "Secure and Easy to Maintain", desc: "Modern, secure code that any developer can update later — including me." }
             ].map((q, idx) => (
               <div key={idx} className="p-4 rounded-xl bg-slate-950 border border-slate-800/80 space-y-1.5">
                 <CheckCircle2 className="w-5 h-5 text-emerald-400" />
@@ -166,9 +166,11 @@ export default function About({ onOpenQuote }) {
         <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-slate-900 via-[#131D31] to-slate-900 border border-slate-800 shadow-2xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-4 text-center lg:text-left space-y-4">
-              <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-[#2478D4] to-slate-900 border-2 border-[#56B4FF]/40 flex items-center justify-center text-white font-display font-extrabold text-4xl shadow-xl shadow-[#2478D4]/20 mx-auto lg:mx-0">
-                A
-              </div>
+              <img
+                src="/founder-abhishek.jpg"
+                alt="Abhishek — Founder of Youmika Digital"
+                className="w-24 h-24 rounded-2xl object-cover border-2 border-[#56B4FF]/40 shadow-xl shadow-[#2478D4]/20 mx-auto lg:mx-0"
+              />
               <div>
                 <h3 className="text-2xl font-display font-bold text-white">
                   Abhishek
@@ -184,13 +186,13 @@ export default function About({ onOpenQuote }) {
 
             <div className="lg:col-span-8 space-y-4 text-slate-300 text-sm leading-relaxed">
               <p>
-                Hello! I am Abhishek, the founder and full-stack developer behind Youmika Digital.
+                Hello! I'm Abhishek — from Bhilwara, Rajasthan. I'm a BCA student in Jaipur, and I taught myself to build websites.
               </p>
               <p>
-                I founded Youmika Digital after witnessing countless small business owners, dental clinics, and local entrepreneurs get burned by traditional agencies that charge exorbitant fees, deliver slow-loading template websites, and disappear when maintenance is needed.
+                I started with my own reading website, Yomika (youmika.site), and I saw how many small businesses around me had no website at all — or had paid a lot for one that never brought them a single customer. That's why I started Youmika Digital: good websites at honest prices, built by the same person you talk to.
               </p>
               <p>
-                By working with me directly, you get direct engineering expertise, clear communication without corporate jargon, and honest pricing starting from just ₹5,999 for India and $199 for US businesses.
+                When you work with me, you get direct answers, clear prices starting at ₹5,999 ($199), and a website that actually works for your business — bookings, calls, and customers included.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
