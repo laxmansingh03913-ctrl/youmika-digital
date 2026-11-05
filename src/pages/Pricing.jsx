@@ -46,7 +46,7 @@ export default function Pricing({ onOpenQuote }) {
     <>
       <SEO
         title="Transparent Pricing Packages — India & USA"
-        description="Explore Youmika Digital's transparent pricing: Starter Website ₹4,999 ($199), Business Website ₹9,999 ($399), and Premium from ₹14,999 ($649). No hidden costs or fake discounts."
+        description="Explore Youmika Digital's transparent pricing: Starter Website ₹5,999 ($199), Business Website ₹9,999 ($399), and Premium from ₹19,999 ($649). No hidden costs or fake discounts."
         canonicalPath="/pricing"
       />
 

@@ -296,9 +296,9 @@ export default function Contact() {
                       onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-sm text-white focus:outline-none focus:border-[#2478D4] focus:ring-1 focus:ring-[#2478D4] transition-all"
                     >
-                      <option value="Starter Package - ₹4,999">Starter Package — ₹4,999</option>
+                      <option value="Starter Package - ₹5,999">Starter Package — ₹5,999</option>
                       <option value="Business Package - ₹9,999">Business Package — ₹9,999</option>
-                      <option value="Premium Package - ₹14,999+">Premium Package — Starting ₹14,999</option>
+                      <option value="Premium Package - ₹19,999+">Premium Package — Starting ₹19,999</option>
                       <option value="USA Starter ($199 USD)">USA Starter ($199 USD)</option>
                       <option value="USA Business ($399 USD)">USA Business ($399 USD)</option>
                       <option value="USA Custom Scope ($649+ USD)">USA Custom Scope ($649+ USD)</option>

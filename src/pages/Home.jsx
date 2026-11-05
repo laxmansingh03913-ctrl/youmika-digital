@@ -48,7 +48,7 @@ export default function Home({ onOpenQuote }) {
     },
     {
       title: "Transparent Pricing",
-      description: "Clear, upfront packages starting from ₹4,999 ($199). No hidden maintenance traps, no inflated quotes or fake discount tricks.",
+      description: "Clear, upfront packages starting from ₹5,999 ($199). No hidden maintenance traps, no inflated quotes or fake discount tricks.",
       icon: Tag
     },
     {
@@ -151,7 +151,7 @@ export default function Home({ onOpenQuote }) {
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-[#56B4FF]" />
-                <span>Transparent Packages from ₹4,999 / $199</span>
+                <span>Transparent Packages from ₹5,999 / $199</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-[#56B4FF]" />
@@ -251,7 +251,7 @@ export default function Home({ onOpenQuote }) {
                       <p className="pl-4"><span className="text-slate-400">email:</span> <span className="text-cyan-300">"web@youmika.site"</span>,</p>
                       <p className="pl-4"><span className="text-slate-400">regions:</span> [<span className="text-emerald-300">"India"</span>, <span className="text-emerald-300">"USA"</span>],</p>
                       <p className="pl-4"><span className="text-slate-400">approach:</span> <span className="text-emerald-300">"Clean Modern Code"</span>,</p>
-                      <p className="pl-4"><span className="text-slate-400">pricingStartsAt:</span> <span className="text-cyan-300">"₹4,999 / $199"</span></p>
+                      <p className="pl-4"><span className="text-slate-400">pricingStartsAt:</span> <span className="text-cyan-300">"₹5,999 / $199"</span></p>
                       <p>&#125;;</p>
                     </div>
 
@@ -622,7 +622,7 @@ export default function Home({ onOpenQuote }) {
                     "At Youmika Digital, I personally design and code your digital experience. I founded this agency with a simple conviction: small businesses, clinics, and ambitious startups deserve clean, high-performance websites without inflated agency retainers or junior handoffs."
                   </p>
                   <p>
-                    When you reach out, you speak directly with me. We establish honest timelines, transparent scope, and predictable fixed pricing starting at ₹4,999 ($199 USD).
+                    When you reach out, you speak directly with me. We establish honest timelines, transparent scope, and predictable fixed pricing starting at ₹5,999 ($199 USD).
                   </p>
 
                   <div className="pt-3 flex flex-wrap items-center gap-4">

@@ -209,9 +209,9 @@ export default function QuoteModal({ isOpen, onClose }) {
                     onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
                     className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-800 text-sm text-white focus:outline-none focus:border-[#2478D4]"
                   >
-                    <option value="₹4,999 - Starter Package">₹4,999 — Starter Website</option>
+                    <option value="₹5,999 - Starter Package">₹5,999 — Starter Website</option>
                     <option value="₹9,999 - Business Package">₹9,999 — Business Website</option>
-                    <option value="₹14,999+ - Premium Package">₹14,999+ — Premium Tier</option>
+                    <option value="₹19,999+ - Premium Package">₹19,999+ — Premium Tier</option>
                     <option value="$199 - $399 (USA Client)">$199 - $399 USD (USA Client)</option>
                     <option value="$400+ Custom (USA Client)">$400+ USD Custom Scope (USA Client)</option>
                   </select>

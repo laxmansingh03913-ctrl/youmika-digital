@@ -190,7 +190,7 @@ export default function About({ onOpenQuote }) {
                 I founded Youmika Digital after witnessing countless small business owners, dental clinics, and local entrepreneurs get burned by traditional agencies that charge exorbitant fees, deliver slow-loading template websites, and disappear when maintenance is needed.
               </p>
               <p>
-                By working with me directly, you get direct engineering expertise, clear communication without corporate jargon, and honest pricing starting from just ₹4,999 for India and $199 for US businesses.
+                By working with me directly, you get direct engineering expertise, clear communication without corporate jargon, and honest pricing starting from just ₹5,999 for India and $199 for US businesses.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
