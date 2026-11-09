@@ -63,7 +63,7 @@ export default function Services({ onOpenQuote }) {
             High-Impact Digital Services Engineered for Growth
           </h1>
           <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-            We don't just build pages; we build strategic digital assets designed to establish authority, attract qualified prospects, and convert visitors into clients.
+            We don't just build pages; we build strategic digital assets designed to establish authority, attract qualified prospects, and convert visitors into clients. And we don't just build websites — we handle your website, marketing and SEO, your entire business online.
           </p>
         </div>
 

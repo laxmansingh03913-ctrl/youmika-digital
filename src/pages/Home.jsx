@@ -118,6 +118,11 @@ export default function Home({ onOpenQuote }) {
               Websites, social media, leads, bookings, and reviews — handled directly by Abhishek while you focus on running your business.
             </p>
 
+            {/* Positioning line */}
+            <p className="text-base sm:text-lg font-semibold text-slate-900 max-w-2xl mx-auto leading-relaxed">
+              We don't just build websites — we handle your website, marketing and SEO, your entire business online.
+            </p>
+
             {/* CTAs */}
             <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link

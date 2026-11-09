@@ -77,7 +77,7 @@ export default function Footer() {
             </Link>
 
             <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
-              We build digital experiences that grow businesses. A modern, premium, reliable digital agency helping companies in India and the USA establish authority and scale online.
+              We don't just build websites — we handle your website, marketing and SEO, your entire business online. A modern, premium, reliable digital agency helping companies in India and the USA establish authority and scale online.
             </p>
 
             <div className="pt-2 text-xs space-y-1.5 text-slate-400">

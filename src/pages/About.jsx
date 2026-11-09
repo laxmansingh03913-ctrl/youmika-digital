@@ -60,7 +60,7 @@ export default function About({ onOpenQuote }) {
             One Person. Your Whole Business, Handled Online.
           </h1>
           <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-            Youmika Digital is my own agency. I build the website, I post on your social media, I answer your leads — no team, no middlemen, no jargon. Serving businesses in India and the USA.
+            Youmika Digital is my own agency. I build the website, I post on your social media, I answer your leads — no team, no middlemen, no jargon. I don't just build websites — I handle your website, marketing and SEO, your entire business online. Serving businesses in India and the USA.
           </p>
         </div>
 
