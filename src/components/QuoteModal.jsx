@@ -53,7 +53,7 @@ export default function QuoteModal({ isOpen, onClose }) {
   const whatsappMessage = encodeURIComponent(
     `Hello Youmika Digital, I requested a quote on your website.\nName: ${formData.fullName}\nBusiness: ${formData.businessName}\nService: ${formData.service}\nBudget: ${formData.budget}`
   );
-  const whatsappUrl = `https://api.whatsapp.com/send?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/918000548640?text=${whatsappMessage}`;
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-black/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 animate-fadeIn">
@@ -91,10 +91,10 @@ export default function QuoteModal({ isOpen, onClose }) {
                 <CheckCircle2 className="w-8 h-8" />
               </div>
               <h4 className="text-xl font-display font-bold text-white">
-                Quotation Request Received!
+                Quotation Request Ready to Send
               </h4>
               <p className="text-slate-300 text-sm max-w-md mx-auto leading-relaxed">
-                Thank you, <strong className="text-white">{formData.fullName}</strong>. Founder &amp; Developer Abhishek will review your project requirements for <strong className="text-[#56B4FF]">{formData.businessName || "your business"}</strong> and reply to <strong className="text-white">{formData.email}</strong> within 24 hours.
+                Thank you, <strong className="text-white">{formData.fullName}</strong>. Your request is saved in this browser — please tap <strong className="text-white">Send on WhatsApp</strong> below so it reaches Abhishek directly, and he will reply to <strong className="text-white">{formData.email}</strong> within 24 hours.
               </p>
 
               <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -197,6 +197,7 @@ export default function QuoteModal({ isOpen, onClose }) {
                     <option value="Digital Marketing">Digital Marketing</option>
                     <option value="Website Maintenance">Website Maintenance</option>
                     <option value="Business Automation">Business Automation</option>
+                    <option value="Complete Business Management">Complete Business Management (Monthly retainer — custom quote)</option>
                   </select>
                 </div>
 

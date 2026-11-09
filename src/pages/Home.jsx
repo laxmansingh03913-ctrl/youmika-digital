@@ -83,7 +83,7 @@ export default function Home({ onOpenQuote }) {
   return (
     <>
       <SEO 
-        title="We Manage Your Entire Business Online | Youmika Digital" 
+        title="We Manage Your Entire Business Online" 
         description="Youmika Digital manages your entire business online — websites, social media, leads, bookings, and reviews — for businesses in India and the USA."
         canonicalPath="/"
       />
@@ -115,7 +115,7 @@ export default function Home({ onOpenQuote }) {
 
             {/* Subheading */}
             <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed">
-              Websites, social media, leads, bookings, and reviews — one team handles your complete online presence while you focus on running your business.
+              Websites, social media, leads, bookings, and reviews — handled directly by Abhishek while you focus on running your business.
             </p>
 
             {/* CTAs */}
@@ -125,7 +125,7 @@ export default function Home({ onOpenQuote }) {
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-gradient-to-r from-[#2478D4] to-[#1D63B5] hover:from-[#1D63B5] hover:to-[#2478D4] text-white font-semibold text-base shadow-xl shadow-[#2478D4]/30 hover:shadow-2xl hover:shadow-[#2478D4]/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
               >
                 <span>Let's Talk</span>
-                <ArrowRight className="w-5 h-5 text-[#1D63B5]" />
+                <ArrowRight className="w-5 h-5 text-white" />
               </Link>
 
               <Link
@@ -171,7 +171,7 @@ export default function Home({ onOpenQuote }) {
                   <span className="w-3 h-3 rounded-full bg-rose-500/80" />
                   <span className="w-3 h-3 rounded-full bg-amber-500/80" />
                   <span className="w-3 h-3 rounded-full bg-emerald-500/80" />
-                  <div className="hidden sm:flex items-center gap-2 ml-4 px-3 py-1 rounded bg-slate-900 border border-slate-800 text-xs text-slate-400 font-mono">
+                  <div className="hidden sm:flex items-center gap-2 ml-4 px-3 py-1 rounded bg-slate-900 border border-slate-800 text-xs text-slate-400 font-mono whitespace-nowrap">
                     <span className="text-emerald-400">https://</span>
                     <span>digital.youmika.site</span>
                   </div>
@@ -400,7 +400,7 @@ export default function Home({ onOpenQuote }) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {servicesData.slice(0, 6).map((service) => (
+            {servicesData.slice(0, 7).map((service) => (
               <div
                 key={service.id}
                 className="p-7 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-[#2478D4]/50 transition-all duration-300 hover:-translate-y-1 group flex flex-col justify-between"
@@ -626,11 +626,9 @@ export default function Home({ onOpenQuote }) {
             <div className="p-8 sm:p-12 rounded-3xl bg-white border border-slate-200 shadow-sm">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div className="lg:col-span-4 text-center lg:text-left space-y-4">
-                  <img
-                    src="/founder-abhishek.jpg"
-                    alt="Abhishek — Founder of Youmika Digital"
-                    className="w-24 h-24 rounded-2xl object-cover border-2 border-[#2478D4]/30 shadow-xl shadow-[#2478D4]/20 mx-auto lg:mx-0"
-                  />
+                  <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-[#2478D4] to-[#101827] border-2 border-[#2478D4]/30 shadow-xl shadow-[#2478D4]/20 mx-auto lg:mx-0 flex items-center justify-center" aria-label="Abhishek — Founder of Youmika Digital">
+                    <span className="text-4xl font-display font-extrabold text-white">A</span>
+                  </div>
                   <div>
                     <h3 className="text-2xl font-display font-bold text-slate-900">
                       Abhishek
@@ -646,7 +644,7 @@ export default function Home({ onOpenQuote }) {
 
                 <div className="lg:col-span-8 space-y-4 text-slate-600 text-sm leading-relaxed">
                   <p>
-                    Hi, I'm Abhishek. I'm a software engineer from Bhilwara, Rajasthan. I taught myself to build websites. I started with my own reading website, Yomika, and now I help clinics, gyms, restaurants, and local businesses get customers online.
+                    Hi, I'm Abhishek. I'm a software engineer from Bhilwara, Rajasthan. I taught myself to build websites. I started with my own reading website, Youmika, and now I help clinics, gyms, restaurants, and local businesses get customers online.
                   </p>
                   <p>
                     When you message me, you talk to me — not a team, not a manager. I build your website myself, I answer your questions myself, and my prices start at ₹5,999 ($199). If I can't do something well, I'll tell you straight.

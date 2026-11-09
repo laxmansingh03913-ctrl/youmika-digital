@@ -10,7 +10,7 @@ export default function WhatsAppButton() {
   );
   
   // Cross-platform WhatsApp URL
-  const whatsappUrl = `https://api.whatsapp.com/send?text=${message}`;
+  const whatsappUrl = `https://wa.me/918000548640?text=${message}`;
 
   return (
     <div className="fixed bottom-6 right-6 z-40 flex items-center gap-3">

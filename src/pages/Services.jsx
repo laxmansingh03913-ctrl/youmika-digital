@@ -49,7 +49,7 @@ export default function Services({ onOpenQuote }) {
     <>
       <SEO
         title="Comprehensive Digital Services"
-        description="Explore Youmika Digital's 7 core offerings: Website Development, UI/UX Design, Landing Pages, SEO, Digital Marketing, Website Maintenance, and Business Automation."
+        description="Explore Youmika Digital's 8 core offerings: Website Development, UI/UX Design, Landing Pages, SEO, Digital Marketing, Website Maintenance, Business Automation, and Complete Business Management."
         canonicalPath="/services"
       />
 
@@ -81,7 +81,7 @@ export default function Services({ onOpenQuote }) {
           ))}
         </div>
 
-        {/* 7 Services Sections */}
+        {/* 8 Services Sections */}
         <div className="space-y-16">
           {servicesData.map((service, index) => {
             const Icon = iconMap[service.icon] || Code2;

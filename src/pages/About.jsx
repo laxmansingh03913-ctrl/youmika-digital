@@ -166,11 +166,9 @@ export default function About({ onOpenQuote }) {
         <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-slate-900 via-[#131D31] to-slate-900 border border-slate-800 shadow-2xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-4 text-center lg:text-left space-y-4">
-              <img
-                src="/founder-abhishek.jpg"
-                alt="Abhishek — Founder of Youmika Digital"
-                className="w-24 h-24 rounded-2xl object-cover border-2 border-[#56B4FF]/40 shadow-xl shadow-[#2478D4]/20 mx-auto lg:mx-0"
-              />
+              <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-[#2478D4] to-[#101827] border-2 border-[#56B4FF]/40 shadow-xl shadow-[#2478D4]/20 mx-auto lg:mx-0 flex items-center justify-center" aria-label="Abhishek — Founder of Youmika Digital">
+                <span className="text-4xl font-display font-extrabold text-white">A</span>
+              </div>
               <div>
                 <h3 className="text-2xl font-display font-bold text-white">
                   Abhishek
@@ -189,7 +187,7 @@ export default function About({ onOpenQuote }) {
                 Hello! I'm Abhishek — a software engineer from Bhilwara, Rajasthan. I taught myself to build websites.
               </p>
               <p>
-                I started with my own reading website, Yomika (youmika.site), and I saw how many small businesses around me had no website at all — or had paid a lot for one that never brought them a single customer. That's why I started Youmika Digital: good websites at honest prices, built by the same person you talk to.
+                I started with my own reading website, Youmika (youmika.site), and I saw how many small businesses around me had no website at all — or had paid a lot for one that never brought them a single customer. That's why I started Youmika Digital: good websites at honest prices, built by the same person you talk to.
               </p>
               <p>
                 When you work with me, you get direct answers, clear prices starting at ₹5,999 ($199), and a website that actually works for your business — bookings, calls, and customers included.

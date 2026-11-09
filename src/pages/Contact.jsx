@@ -10,7 +10,6 @@ import {
   Sparkles, 
   Clock, 
   Info,
-  Code,
   ArrowRight
 } from "lucide-react";
 import SEO from "../components/SEO";
@@ -89,7 +88,7 @@ export default function Contact() {
         // Storage access fallback
       }
 
-      setStatusMessage("Inquiry successfully delivered. Abhishek will respond within 24 hours.");
+      setStatusMessage(endpoint ? "Inquiry sent successfully. Abhishek will respond within 24 hours." : "Your enquiry is saved in this browser — please send it directly via WhatsApp or Email below so it reaches Abhishek. He will respond within 24 hours.");
       setSubmitted(true);
     } catch (error) {
       // Fallback
@@ -103,7 +102,7 @@ export default function Contact() {
   const whatsappMessage = encodeURIComponent(
     `Hello Youmika Digital, I would like to inquire about a project.\n\nName: ${formData.fullName || "Prospective Client"}\nBusiness: ${formData.businessName || "Not specified"}\nService: ${formData.service}\nBudget: ${formData.budget}`
   );
-  const whatsappUrl = `https://api.whatsapp.com/send?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/918000548640?text=${whatsappMessage}`;
 
   const mailtoUrl = `mailto:web@youmika.site?subject=${encodeURIComponent(
     `Project Inquiry: ${formData.businessName || formData.fullName || "Website Project"}`
@@ -114,7 +113,7 @@ export default function Contact() {
   return (
     <>
       <SEO
-        title="Contact Us — Start Your Project | Youmika Digital"
+        title="Contact Us — Start Your Project"
         description="Get in touch with Youmika Digital. Request a tailored quotation for web development, UI/UX, or SEO for your business in India or the USA. Fast response within 24 hours."
         canonicalPath="/contact"
       />
@@ -264,6 +263,7 @@ export default function Contact() {
                       <option value="Digital Marketing">Digital Marketing</option>
                       <option value="Website Maintenance">Website Maintenance</option>
                       <option value="Business Automation">Business Automation</option>
+                      <option value="Complete Business Management">Complete Business Management (Monthly retainer — custom quote)</option>
                     </select>
                   </div>
 
@@ -302,6 +302,7 @@ export default function Contact() {
                       <option value="USA Starter ($199 USD)">USA Starter ($199 USD)</option>
                       <option value="USA Business ($399 USD)">USA Business ($399 USD)</option>
                       <option value="USA Custom Scope ($649+ USD)">USA Custom Scope ($649+ USD)</option>
+                      <option value="Complete Business Management — Monthly retainer (custom quote)">Complete Business Management — Monthly retainer (custom quote)</option>
                     </select>
                   </div>
 
@@ -381,6 +382,7 @@ export default function Contact() {
               <p className="text-xs text-slate-300 leading-relaxed">
                 Connect directly on WhatsApp to ask questions about scope feasibility, timelines, or custom features.
               </p>
+              <p className="text-xs font-mono text-emerald-400">WhatsApp: +91 80005 48640</p>
 
               <a
                 href={whatsappUrl}
@@ -432,16 +434,6 @@ export default function Contact() {
               </p>
             </div>
 
-            {/* Backend Integration Architecture Note */}
-            <div className="p-5 rounded-2xl bg-[#0B0F19] border border-slate-800 text-xs text-slate-400 space-y-2">
-              <div className="flex items-center gap-2 text-slate-300 font-mono text-[11px]">
-                <Code className="w-3.5 h-3.5 text-[#2478D4]" />
-                <span>Developer Note: Form Delivery</span>
-              </div>
-              <p className="text-[11px] leading-relaxed">
-                Inquiries are locally backed up in your browser and will dispatch via <code>POST</code> if <code>VITE_FORM_ENDPOINT</code> is specified. Submissions also support instant 1-click forwarding to WhatsApp and Email.
-              </p>
-            </div>
           </div>
         </div>
       </div>

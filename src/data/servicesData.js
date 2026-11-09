@@ -8,8 +8,8 @@ export const servicesData = [
     icon: "Code2",
     tag: "Core Specialty",
     benefits: [
-      "Sub-second load times that keep visitors engaged",
-      "100% responsive across smartphones, tablets, and desktop displays",
+      "Fast load times that keep visitors engaged",
+      "Responsive across smartphones, tablets, and desktop displays",
       "Scalable code architecture that grows with your business",
       "Clean semantic code favored by Google search crawlers"
     ],
@@ -130,7 +130,7 @@ export const servicesData = [
       "Continual speed and database optimizations"
     ],
     deliverables: [
-      "24/7 uptime monitoring with automated alert triggers",
+      "Uptime monitoring with automated alert triggers",
       "Regular core, plugin, and dependency security updates",
       "Weekly / monthly off-site encrypted cloud backups",
       "Dedicated developer hours for ongoing content updates and minor changes"
@@ -147,7 +147,7 @@ export const servicesData = [
     icon: "Cpu",
     tag: "Efficiency & Speed",
     benefits: [
-      "Instant lead response within seconds, capturing prospect inquiries before they contact competitors",
+      "Fast lead response, capturing prospect inquiries before they contact competitors",
       "Elimination of repetitive manual data entry and calendar coordination",
       "Automated appointment booking with SMS/WhatsApp confirmation reminders",
       "Seamless synchronization between web forms, Google Sheets, and CRM tools"
@@ -166,19 +166,19 @@ export const servicesData = [
     number: "08",
     title: "Complete Business Management",
     shortDescription: "Your entire business, managed online — website, social media, leads, bookings, and reviews, handled for you every month.",
-    longDescription: "A website alone doesn't grow a business. We take over your complete online presence — posting on social media, keeping your Google profile fresh, answering leads fast, managing bookings, and collecting reviews — so customers keep coming while you focus on your work. One team, one monthly plan, everything handled.",
+    longDescription: "A website alone doesn't grow a business. We take over your complete online presence — posting on social media, keeping your Google profile fresh, answering leads fast, managing bookings, and collecting reviews — so customers keep coming while you focus on your work. One person, one monthly plan, everything handled directly by Abhishek.",
     icon: "Briefcase",
     tag: "Monthly Partner",
     benefits: [
-      "One team managing your website, social media, and Google presence — no juggling multiple freelancers",
-      "Leads answered within minutes, not hours — so enquiries never go cold",
+      "Abhishek directly managing your website, social media, and Google presence — no juggling multiple freelancers",
+      "Leads answered fast, within 24 hours — so enquiries never go cold",
       "Bookings, reviews, and follow-ups handled every day without you lifting a finger",
       "One clear monthly report: enquiries, bookings, and growth — no confusing jargon"
     ],
     deliverables: [
       "Regular social media posts (Instagram + Facebook) with creatives and captions",
       "Google Business Profile management: posts, photos, reviews, and Q&A",
-      "Lead follow-up on WhatsApp and enquiry forms within minutes",
+      "Lead follow-up on WhatsApp and enquiry forms within 24 hours",
       "Booking and appointment calendar management with reminders",
       "Monthly growth report with enquiries, bookings, and next steps"
     ],

@@ -35,7 +35,7 @@ export default function Footer() {
                 <ArrowUpRight className="w-4 h-4" />
               </Link>
               <a
-                href="https://api.whatsapp.com/send?text=Hi%20Youmika%20Digital%2C%20I%20would%20like%20to%20discuss%20a%20website%20project"
+                href="https://wa.me/918000548640?text=Hi%20Youmika%20Digital%2C%20I%20would%20like%20to%20discuss%20a%20website%20project"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white font-semibold text-sm border border-slate-700 transition-colors"
@@ -102,7 +102,7 @@ export default function Footer() {
                 <Link to="/" className="hover:text-white transition-colors">Home</Link>
               </li>
               <li>
-                <Link to="/services" className="hover:text-white transition-colors">Services (7 Offerings)</Link>
+                <Link to="/services" className="hover:text-white transition-colors">Services (8 Offerings)</Link>
               </li>
               <li>
                 <Link to="/work" className="hover:text-white transition-colors">Our Work (Demo Projects)</Link>
@@ -142,6 +142,12 @@ export default function Footer() {
               </li>
               <li>
                 <Link to="/services#business-automation" className="hover:text-white transition-colors">Business Automation</Link>
+              </li>
+              <li>
+                <Link to="/services#website-maintenance" className="hover:text-white transition-colors">Website Maintenance</Link>
+              </li>
+              <li>
+                <Link to="/services#complete-business-management" className="hover:text-white transition-colors">Complete Business Management</Link>
               </li>
             </ul>
           </div>
@@ -187,6 +193,15 @@ export default function Footer() {
                 <Mail className="w-3.5 h-3.5 text-[#56B4FF]" />
                 <span>web@youmika.site</span>
               </a>
+              <a
+                href="https://wa.me/918000548640"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-medium text-slate-300 hover:text-[#56B4FF] transition-colors flex items-center gap-1.5 mt-1.5"
+              >
+                <MessageSquare className="w-3.5 h-3.5 text-[#25D366]" />
+                <span>WhatsApp: +91 80005 48640</span>
+              </a>
             </div>
           </div>
         </div>
@@ -196,7 +211,7 @@ export default function Footer() {
           <Shield className="w-5 h-5 text-[#56B4FF] shrink-0 mt-0.5" />
           <div>
             <strong className="text-slate-300 font-semibold block mb-0.5">Integrity &amp; Demonstration Disclosure:</strong>
-            Portfolio items presented on this site (Apex Dental Care, IronPulse Fitness, and Saffron &amp; Sage Bistro) are concept demonstration projects built to showcase our technical craftsmanship, design aesthetics, and conversion architecture. We pride ourselves on transparent, honest business practices and never misrepresent concept prototypes as completed client contracts.
+            Portfolio items presented on this site (Apex Dental &amp; Implant Center, IronPulse Athletic Club, and Saffron &amp; Sage Fine Bistro) are concept demonstration projects built to showcase our technical craftsmanship, design aesthetics, and conversion architecture. We pride ourselves on transparent, honest business practices and never misrepresent concept prototypes as completed client contracts.
           </div>
         </div>
 
@@ -206,7 +221,7 @@ export default function Footer() {
             &copy; {currentYear} <strong className="text-slate-300">Youmika Digital</strong>. All rights reserved.
           </div>
           <div className="flex items-center gap-6">
-            <Link to="/about" className="hover:text-slate-300 transition-colors">Company Process</Link>
+            <Link to="/about" className="hover:text-slate-300 transition-colors">About Us</Link>
             <Link to="/pricing" className="hover:text-slate-300 transition-colors">Transparent Pricing</Link>
             <Link to="/contact" className="hover:text-slate-300 transition-colors">Contact</Link>
           </div>

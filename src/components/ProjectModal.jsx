@@ -18,7 +18,7 @@ export default function ProjectModal({ project, onClose }) {
             <span className="w-3 h-3 rounded-full bg-green-500/80" />
             <div className="hidden sm:flex items-center gap-2 ml-4 px-3 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs text-slate-400 font-mono">
               <span className="text-emerald-400">https://</span>
-              <span>demo.{project.id}.youmika.site</span>
+              <span>digital.youmika.site{project.demoUrl}</span>
             </div>
           </div>
 
@@ -107,7 +107,7 @@ export default function ProjectModal({ project, onClose }) {
                       {bookingSuccess ? "✓ Action Simulated!" : project.mockupDetails.primaryAction}
                     </button>
                     <span className="text-xs text-slate-400">
-                      Click to test interactive trigger
+                      Try it — this opens the real live demo below
                     </span>
                   </div>
 
@@ -115,7 +115,7 @@ export default function ProjectModal({ project, onClose }) {
                     <div className="p-3 rounded-lg bg-emerald-950/60 border border-emerald-500/40 text-emerald-200 text-xs flex items-center gap-2 animate-fadeIn">
                       <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
                       <span>
-                        Simulated Workflow: Inquiry captured and queued to instant WhatsApp &amp; Calendar notification system.
+                        Demo action: this is a preview — use the live demo website to try the real booking flow.
                       </span>
                     </div>
                   )}
